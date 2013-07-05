@@ -1,0 +1,136 @@
+[24-Apr-2013 04:25:19] PHP Fatal error:  Call to undefined method UsersController::generarPass() in /home/proartis/public_html/web/app/Controller/UsersController.php on line 39
+[24-Apr-2013 04:25:39] PHP Fatal error:  Call to undefined method UsersController::generarPass() in /home/proartis/public_html/web/app/Controller/UsersController.php on line 39
+[24-Apr-2013 05:14:01] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 14592 bytes) in /home/proartis/public_html/web/app/Controller/Component/JqImgcropComponent.php on line 57
+[24-Apr-2013 05:41:20] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2048 bytes) in /home/proartis/public_html/web/app/Controller/Component/JqImgcropComponent.php on line 63
+[26-Apr-2013 00:23:33] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home/proartis/public_html/web/app/View/Index/index.ctp on line 33
+[26-Apr-2013 01:12:17] PHP Parse error:  syntax error, unexpected $end in /home/proartis/public_html/web/app/View/Index/index.ctp on line 111
+[26-Apr-2013 04:08:21] PHP Warning:  unlink(/home/proartis/public_html/web/app/tmp/cache/persistent/myapp_cake_core_default_es-es) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/proartis/public_html/web/lib/Cake/Cache/Engine/FileEngine.php on line 254
+[26-Apr-2013 04:08:21] PHP Warning:  unlink(/home/proartis/public_html/web/app/tmp/cache/persistent/myapp_cake_core_cake_es-es) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/proartis/public_html/web/lib/Cake/Cache/Engine/FileEngine.php on line 254
+[27-Apr-2013 06:59:18] PHP Fatal error:  Class 'CakeEmail' not found in /home/proartis/public_html/web/app/Controller/UsersController.php on line 47
+[27-Apr-2013 07:03:51] PHP Fatal error:  Class 'Routes' not found in /home/proartis/public_html/web/app/View/Emails/html/registro.ctp on line 9
+[27-Apr-2013 07:19:01] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/proartis/public_html/web/app/Controller/UsersController.php on line 114
+[27-Apr-2013 07:19:16] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/proartis/public_html/web/app/Controller/UsersController.php on line 114
+[27-Apr-2013 07:19:20] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/proartis/public_html/web/app/Controller/UsersController.php on line 114
+[27-Apr-2013 07:36:47] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/proartis/public_html/web/app/Model/User.php on line 57
+[27-Apr-2013 07:48:56] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/proartis/public_html/web/app/Controller/UsersController.php on line 133
+[27-Apr-2013 07:49:11] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/proartis/public_html/web/app/Controller/UsersController.php on line 134
+[27-Apr-2013 07:49:14] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/proartis/public_html/web/app/Controller/UsersController.php on line 134
+[27-Apr-2013 16:35:02] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home/proartis/public_html/web/app/Controller/UsersController.php on line 166
+[27-Apr-2013 17:29:44] PHP Fatal error:  Call to undefined function  sql() in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 40
+[29-Apr-2013 00:50:34] PHP Fatal error:  Call to a member function findById() on a non-object in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 81
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  Error in /home/proartis/public_html/web/lib/Cake/Core/Configure.php on line 98
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  Exception in /home/proartis/public_html/web/lib/Cake/Core/Configure.php on line 99
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 474
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[01-May-2013 16:21:19] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[01-May-2013 16:21:19] PHP Warning:  call_user_func_array() [<a href='function.call-user-func-array'>function.call-user-func-array</a>]: First argument is expected to be a valid callback, 'JqImgcropComponent::beforeRedirect' was given in /home/proartis/public_html/web/lib/Cake/Utility/ObjectCollection.php on line 131
+[03-May-2013 00:00:59] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 50
+[03-May-2013 00:04:07] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 51
+[03-May-2013 00:06:14] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 52
+[03-May-2013 00:06:26] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 52
+[03-May-2013 00:07:31] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 52
+[03-May-2013 00:07:45] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 52
+[03-May-2013 00:08:08] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 52
+[03-May-2013 00:08:54] PHP Parse error:  syntax error, unexpected T_STRING, expecting ')' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 52
+[04-May-2013 22:31:36] PHP Notice:  Undefined index:  Error in /home/proartis/public_html/web/lib/Cake/Core/Configure.php on line 98
+[04-May-2013 22:31:36] PHP Notice:  Undefined index:  Exception in /home/proartis/public_html/web/lib/Cake/Core/Configure.php on line 99
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 474
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  cookie in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 468
+[04-May-2013 22:31:37] PHP Notice:  Undefined index:  timeout in /home/proartis/public_html/web/lib/Cake/Model/Datasource/CakeSession.php on line 507
+[04-May-2013 22:31:37] PHP Warning:  call_user_func_array() [<a href='function.call-user-func-array'>function.call-user-func-array</a>]: First argument is expected to be a valid callback, 'JqImgcropComponent::beforeRedirect' was given in /home/proartis/public_html/web/lib/Cake/Utility/ObjectCollection.php on line 131
+[04-May-2013 22:35:46] PHP Warning:  Unterminated comment starting line 58 in /home/proartis/public_html/web/app/Config/core.php on line 58
+[04-May-2013 22:35:46] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/proartis/public_html/web/app/Config/core.php on line 58
+[05-May-2013 04:46:51] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/proartis/public_html/web/app/View/Imagenes/editar.ctp on line 58
+[05-May-2013 05:29:09] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 7
+[05-May-2013 05:29:26] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 7
+[05-May-2013 05:29:53] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 7
+[05-May-2013 05:30:44] PHP Parse error:  syntax error, unexpected ')' in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 6
+[05-May-2013 05:30:55] PHP Parse error:  syntax error, unexpected ')' in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 6
+[05-May-2013 05:50:09] PHP Warning:  Unterminated comment starting line 58 in /home/proartis/public_html/web/app/Config/core.php on line 58
+[05-May-2013 05:50:09] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/proartis/public_html/web/app/Config/core.php on line 58
+[05-May-2013 06:31:31] PHP Parse error:  syntax error, unexpected T_FOREACH in /home/proartis/public_html/web/app/View/Index/index.ctp on line 10
+[05-May-2013 06:31:34] PHP Parse error:  syntax error, unexpected T_FOREACH in /home/proartis/public_html/web/app/View/Index/index.ctp on line 10
+[07-May-2013 03:25:46] PHP Fatal error:  Call to a member function schema() on a non-object in /home/proartis/public_html/web/lib/Cake/Model/Model.php on line 3286
+[07-May-2013 03:29:44] PHP Fatal error:  Call to a member function schema() on a non-object in /home/proartis/public_html/web/lib/Cake/Model/Model.php on line 3286
+[07-May-2013 03:32:25] PHP Fatal error:  Call to a member function schema() on a non-object in /home/proartis/public_html/web/lib/Cake/Model/Model.php on line 3286
+[07-May-2013 03:32:36] PHP Fatal error:  Call to a member function schema() on a non-object in /home/proartis/public_html/web/lib/Cake/Model/Model.php on line 3286
+[07-May-2013 03:32:55] PHP Parse error:  syntax error, unexpected T_ARRAY, expecting T_FUNCTION in /home/proartis/public_html/web/app/Model/Item.php on line 25
+[07-May-2013 03:32:57] PHP Parse error:  syntax error, unexpected T_ARRAY, expecting T_FUNCTION in /home/proartis/public_html/web/app/Model/Item.php on line 25
+[07-May-2013 03:35:00] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/proartis/public_html/web/app/Model/Item.php on line 54
+[07-May-2013 03:36:03] PHP Fatal error:  Call to a member function schema() on a non-object in /home/proartis/public_html/web/lib/Cake/Model/Model.php on line 3286
+[07-May-2013 04:08:41] PHP Fatal error:  Call to a member function find() on a non-object in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 103
+[07-May-2013 05:03:17] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 104
+[02-Jun-2013 19:29:16] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/proartis/public_html/web/app/View/Noticias/admin_editar.ctp on line 4
+[02-Jun-2013 20:20:49] PHP Fatal error:  Call to a member function find() on a non-object in /home/proartis/public_html/web/app/Controller/IndexController.php on line 13
+[02-Jun-2013 21:06:49] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /home/proartis/public_html/web/app/View/Contactos/index.ctp on line 5
+[03-Jun-2013 05:37:52] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 05:38:05] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 05:39:40] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 05:39:46] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/routes.php on line 38
+[03-Jun-2013 05:40:34] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 05:42:28] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 05:42:29] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 05:42:29] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 05:42:29] PHP Fatal error:  Class 'CakePlugin' not found in /home/proartis/public_html/web/app/Config/bootstrap.php on line 168
+[03-Jun-2013 14:06:41] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 17472 bytes) in /home/proartis/public_html/web/app/Controller/Component/JqImgcropComponent.php on line 66
+[03-Jun-2013 16:52:31] PHP Fatal error:  Function name must be a string in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 11
+[03-Jun-2013 16:52:42] PHP Fatal error:  Function name must be a string in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 11
+[03-Jun-2013 16:58:22] PHP Fatal error:  Function name must be a string in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 11
+[03-Jun-2013 16:58:25] PHP Fatal error:  Function name must be a string in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 11
+[03-Jun-2013 16:59:32] PHP Fatal error:  Function name must be a string in /home/proartis/public_html/web/app/View/Items/editar.ctp on line 11
+[03-Jun-2013 18:10:30] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 96
+[03-Jun-2013 18:36:07] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ')' in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 106
+[03-Jun-2013 19:22:07] PHP Parse error:  syntax error, unexpected T_ECHO in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 90
+[03-Jun-2013 21:05:12] PHP Parse error:  syntax error, unexpected $end in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 94
+[03-Jun-2013 21:53:19] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 265
+[03-Jun-2013 21:53:19] PHP Parse error:  syntax error, unexpected $end, expecting ']' in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 265
+[08-Jun-2013 18:11:56] PHP Fatal error:  Call to undefined function  dd() in /home/proartis/public_html/web/app/Model/Item.php on line 109
+[10-Jun-2013 15:07:10] PHP Fatal error:  Call to undefined function  dd() in /home/proartis/public_html/web/app/Model/Item.php on line 112
+[10-Jun-2013 15:07:35] PHP Fatal error:  Call to undefined function  dd() in /home/proartis/public_html/web/app/Model/Item.php on line 112
+[10-Jun-2013 15:07:48] PHP Fatal error:  Call to undefined function  dd() in /home/proartis/public_html/web/app/Model/Item.php on line 112
+[10-Jun-2013 15:35:54] PHP Fatal error:  Call to undefined function  dd() in /home/proartis/public_html/web/app/Model/Item.php on line 112
+[10-Jun-2013 15:36:49] PHP Fatal error:  Call to undefined function  dd() in /home/proartis/public_html/web/app/Model/Item.php on line 114
+[10-Jun-2013 15:37:57] PHP Parse error:  syntax error, unexpected '{' in /home/proartis/public_html/web/app/Model/Item.php on line 111
+[11-Jun-2013 04:55:34] PHP Warning:  Unterminated comment starting line 77 in /home/proartis/public_html/web/lib/Cake/View/Helper/PaginatorHelper.php on line 77
+[11-Jun-2013 04:55:34] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/proartis/public_html/web/lib/Cake/View/Helper/PaginatorHelper.php on line 77
+[11-Jun-2013 04:57:43] PHP Parse error:  syntax error, unexpected $end in /home/proartis/public_html/web/lib/Cake/View/Helper/PaginatorHelper.php on line 111
+[11-Jun-2013 05:01:31] PHP Parse error:  syntax error, unexpected $end in /home/proartis/public_html/web/lib/Cake/View/Helper/PaginatorHelper.php on line 227
+[11-Jun-2013 05:01:57] PHP Warning:  Unterminated comment starting line 77 in /home/proartis/public_html/web/lib/Cake/View/Helper/PaginatorHelper.php on line 77
+[11-Jun-2013 05:01:57] PHP Fatal error:  fatal flex scanner internal error--end of buffer missed in /home/proartis/public_html/web/lib/Cake/View/Helper/PaginatorHelper.php on line 77
+[12-Jun-2013 20:03:01] PHP Parse error:  syntax error, unexpected T_ARRAY in /home/proartis/public_html/web/app/View/Emails/html/registro.ctp on line 9
+[12-Jun-2013 22:32:57] PHP Parse error:  syntax error, unexpected '}' in /home/proartis/public_html/web/app/Controller/ImagenesController.php on line 35
+[12-Jun-2013 23:09:27] PHP Parse error:  syntax error, unexpected '}' in /home/proartis/public_html/web/app/Controller/ImagenesController.php on line 30
+[12-Jun-2013 23:10:06] PHP Parse error:  syntax error, unexpected ';' in /home/proartis/public_html/web/app/Controller/ImagenesController.php on line 29
+[13-Jun-2013 00:18:31] PHP Fatal error:  Call to undefined method IndexController::Config() in /home/proartis/public_html/web/app/Controller/IndexController.php on line 46
+[13-Jun-2013 00:39:02] PHP Fatal error:  Call to undefined function  sql() in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 227
+[13-Jun-2013 00:40:51] PHP Parse error:  syntax error, unexpected ';' in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 227
+[13-Jun-2013 00:42:47] PHP Fatal error:  Call to a member function getLog() on a non-object in /home/proartis/public_html/web/app/Controller/ItemsController.php on line 227
+[13-Jun-2013 00:50:27] PHP Parse error:  syntax error, unexpected ';' in /home/proartis/public_html/web/app/Controller/ImagenesController.php on line 22
+[13-Jun-2013 01:08:31] PHP Parse error:  syntax error, unexpected '}' in /home/proartis/public_html/web/app/View/Publicidads/admin_index.ctp on line 38
+[13-Jun-2013 01:22:56] PHP Fatal error:  Call to a member function save() on a non-object in /home/proartis/public_html/web/app/Controller/PublicidadsController.php on line 17
+[14-Jun-2013 20:43:03] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/proartis/public_html/web/app/View/Index/index.ctp on line 74
+[14-Jun-2013 21:34:05] PHP Warning:  Unexpected character in input:  ''' (ASCII=39) state=1 in /home/proartis/public_html/web/app/View/Index/index.ctp on line 61
+[14-Jun-2013 21:34:05] PHP Parse error:  syntax error, unexpected $end, expecting ')' in /home/proartis/public_html/web/app/View/Index/index.ctp on line 61
+[14-Jun-2013 22:06:35] PHP Parse error:  syntax error, unexpected '?' in /home/proartis/public_html/web/app/View/Index/index.ctp on line 123
+[17-Jun-2013 21:33:46] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home/proartis/public_html/web/app/View/Index/admin_index.ctp on line 60
+[17-Jun-2013 22:10:09] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /home/proartis/public_html/web/app/Controller/IndexController.php on line 74
