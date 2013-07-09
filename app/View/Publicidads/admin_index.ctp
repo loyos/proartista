@@ -39,6 +39,12 @@
 			));
 			echo '</td>';
 			echo '</tr>';
+			echo '<tr>';
+			echo '<td>Link</td>';
+			echo '<td>';
+			echo $this->Form->input('Publicidad.link',array('label'=>false));
+			echo '</td>';
+			echo '</tr>';
 			 echo '</table>';
 			 echo '</table>';
  '</table>';
