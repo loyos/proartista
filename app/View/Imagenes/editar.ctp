@@ -42,12 +42,13 @@
 			 echo '</table>';
 			 
 	?> 
-		<div class = "instructions" style = "float: right; color: white; margin-right: 20px; max-width: 250px; margin-left: 20px; text-align: justify; font-size: 14px; margin-top: 30px;">
+		<div class = "instructions" style = "float: right; color: white; margin-right: 20px; max-width: 250px; margin-left: 20px; text-align: justify; font-size: 14px; margin-top: 15px;">
 			
-			Aquí podrás cambiar tu imagen principal, así como las imagenes que quieras mostrar en tu publicación,
-			una vez finalizada la selección de imagenes, selecciona guardar. Para finalizar la
-			edición de tu publicación presiona el botón "Finalizar".
-			
+			Aquí podrás cambiar tu imagen principal, así como las imagenes que quieras mostrar en tu publicación.<br><br>
+			1) Agrega tu imagen principal.<br><br>
+			2) Agrega de 1 a 4 fotos para tú galeria(opcional).<br><br>
+			3) Presiona el botón guardar.<br><br>
+			4) Si estás conforme presiona el botón finalizar.
 		</div>
 	<?php
 	echo '<table cellspacing="0" cellpadding="10" style = "margin-top: 40px; clear: left;  border-top: 1px solid #F29100">';
