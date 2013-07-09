@@ -372,7 +372,7 @@ function genero3_change(){
 			));
 		}
 		
-		echo '<span style= "font-size: 14px;"> Los campos señalados con <span style = "color:red;">"*"</span> son obligatorios </span><br>'; 
+		echo '<span style= "font-size: 14px;"> Los campos señalados con <span style = "color:red; font-size: 30px; position: relative; top: 10px;"> * </span> son obligatorios </span><br>'; 
 		echo $this->Form->submit('Siguiente', array('class' => 'button'));
 		echo $this->Form->end;
 		
