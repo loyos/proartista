@@ -66,6 +66,8 @@ $cakeDescription = "ProArtista";
 				echo '|';
 				echo $this->Html->link(' Publicaciones ',array('controller' => 'users', 'action'=>'admin_index'));
 				echo '|';
+				echo $this->Html->link(' Estadisticas ',array('controller' => 'index', 'action'=>'admin_reportes'));
+				echo '|';
 				echo $this->Html->link(' Otros ',array('controller' => 'index', 'action'=>'admin_otros'));
 				echo '|';
 				echo $this->Html->link(' Cerrar Sesión ',array('controller' => 'users', 'action'=>'logout'));

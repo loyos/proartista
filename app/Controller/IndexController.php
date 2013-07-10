@@ -2,7 +2,7 @@
 class IndexController extends AppController {
     public $helpers = array('Html', 'Form', 'Session');
     public $components = array('Session');
-	public $uses = array('Item','Noticia','Config','Frase');	
+	public $uses = array('Item','Noticia','Config','Frase','User');	
 	
 	 public function beforeFilter() {
 		parent::beforeFilter();
@@ -73,6 +73,23 @@ class IndexController extends AppController {
 	function admin_eliminar_frase($id) {
 		$this->Frase->delete($id);
 		$this->redirect(array('action' => 'admin_index'));
+	}
+	
+	function admin_reportes(){
+		$publicaciones_activas = $this->Item->find('all',array(
+			'conditions' => array('Item.status' => 'activo')
+		));
+		$publicaciones_activas = count($publicaciones_activas);
+		$publicaciones_pendientes = $this->Item->find('all',array(
+			'conditions' => array('Item.status' => 'pendiente')
+		));
+		$publicaciones_pendientes = count($publicaciones_pendientes);
+		$totales = $publicaciones_pendientes+$publicaciones_activas;
+		$usuarios = $this->User->find('all',array(
+			'conditions' => array('User.activo' => 1)
+		));
+		$usuarios = count($usuarios);
+		$this->set(compact('publicaciones_activas','publicaciones_pendientes','totales','usuarios'));
 	}
 
 }
