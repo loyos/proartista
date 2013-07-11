@@ -72,7 +72,7 @@
 		if (!empty($item['Item']['email'])) {
 			echo '<p>';
 			echo '<span class="title_span">Email:</span>';
-			echo '<span class="descripcion_span">'.$item['Item']['email'].'</span>';
+			echo '<span class="descripcion_span"><a href="mailto:'.$item['Item']['email'].'">'.$item['Item']['email'].'</a></span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['telefono'])) {
@@ -90,7 +90,7 @@
 		if (!empty($item['Item']['video'])) {
 			echo '<p>';
 			echo '<span class="title_span">Video:</span>';
-			echo '<span class="descripcion_span">'.$item['Item']['video'].'</span>';
+			echo '<span class="descripcion_span"><a href="'.$item['Item']['video'].'">'.$item['Item']['video'].'</a></span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['biografia'])) {
