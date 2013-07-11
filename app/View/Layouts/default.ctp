@@ -31,7 +31,7 @@ $cakeDescription = "ProArtista";
 		echo $this->Html->css('style');
 		echo $this->Html->css('global');
 		echo $this->Html->script('jquery.1.9.1.min');
-		echo $this->Html->script('slides.min.jquery');	
+		echo $this->Html->script('jquery.slides.min.js');
 		echo $this->Html->script('tiny_mce');
 		echo $this->Html->script('ticker00');
 		
@@ -84,11 +84,18 @@ $cakeDescription = "ProArtista";
 			}
 			?>
 		
-			<div class="logo"><?php echo $this->Html->link($this->Html->Image('logo.png'),array(
-				'controller' => 'index','action'=>'index',
-			),
-			array('escape' => false)
-			)?></div>
+			<div class="logo">
+				<?php
+					echo $this->Html->link($this->Html->Image('logo.png'),array(
+						'controller' => 'index','action'=>'index',
+						),
+						array('escape' => false)
+					)
+				?>
+				<div class = "rif">
+					J-40263376-9
+				</div>
+			</div>
 			<div class="menu">
 				<ul>
 				<?php
