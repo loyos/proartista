@@ -107,17 +107,16 @@ body {
 */
 
 #slides .next,#slides .prev {
-	position:absolute;
-	top:107px;
-	left:0px;
+	position: relative;
+	top:135px;
+	left:-434px;
 	width:24px;
 	height:43px;
-	display:block;
 	z-index:101;
 }
 
 #slides .next {
-	left:585px;
+	left: -89px;
 }
 
 /*

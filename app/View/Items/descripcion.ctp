@@ -46,8 +46,8 @@
 				}
 			?>
 	</div>
-		<?php //echo $this->Html->image('img/arrow-prev.png', array('width' => '24px', 'height' => '43', 'class' => 'prev')); ?>
-		<?php //echo $this->Html->image('img/arrow-next.png', array('width' => '24px', 'height' => '43', 'class' => 'next')); ?>
+		<?php echo $this->Html->image('img/arrow-prev.png', array('width' => '24px', 'height' => '43', 'class' => 'prev')); ?>
+		<?php echo $this->Html->image('img/arrow-next.png', array('width' => '24px', 'height' => '43', 'class' => 'next')); ?>
 	</div>
 </div>
 </div>
