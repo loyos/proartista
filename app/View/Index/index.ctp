@@ -292,7 +292,9 @@
 		?>
 		<tr>
 			<td width="221" align="left" style="font-size: 12px; font-weight: bold; text-align: left; font-family: 'Arial Black', Gadget, sans-serif; color: #FFF;">
-			<span style="color: #F29100; font-weight: bold; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 16px;"><?php echo $n['Noticia']['titulo']?> </span>
+				<span style="color: #F29100; font-weight: bold; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 16px;"><?php echo $n['Noticia']['titulo']?> </span>
+				<?php $timestamp = strtotime($n['Noticia']['fecha']); ?>
+				<span style="color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;"><?php echo date('d/m/Y', $timestamp);?> </span>				
 			</td>
 		</tr>
 		<tr>

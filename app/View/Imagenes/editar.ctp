@@ -192,13 +192,17 @@ function readURL(input) {
 			alert("La imagen no puede superar 1.5 MB");
             return false;
 		}
-		var reader = new FileReader();
-		reader.onload = function (e) {
-			$(id_wrap).attr('src', e.target.result);
+		if(window.FileReader){
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				$(id_wrap).attr('src', e.target.result);
+			}
+			reader.readAsDataURL(input.files[0]);
+		console.debug($(id_wrap).attr('src'));			
+				
+		}else{
+			$(id_wrap).attr('src', "/proartista/img/check.png");
 		}
-
-		reader.readAsDataURL(input.files[0]);
-		
 	}
 }
 

@@ -10,7 +10,9 @@ class IndexController extends AppController {
 	}
 
     public function index() {
-		$noticias = $this->Noticia->find('all');
+		$noticias = $this->Noticia->find('all', array(
+			'order' => array('Noticia.fecha' => 'desc'))
+		);
 		$config  = $this->Config->find('first');
 		$frases = $this->Frase->find('all');
 		$nivel = 1; // nivel de la publicidad, en index por ser el home, la publicidad colocada allí sera de nivel 1!
