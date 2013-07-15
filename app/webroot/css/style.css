@@ -287,8 +287,9 @@ h2 {
 }
 
 .publicidad_izq {
-	background-image: url('../img/background_wrap.png');
-	background-repeat: repeat;
+	/*background-image: url('../img/background_wrap.png');
+	background-repeat: repeat;*/
+	background-image: url('../img/back_publicidad.jpg');	
 	/*background-color:#10100E;*/
 	width: 235px;
 	height: 730px;
