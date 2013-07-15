@@ -37,7 +37,7 @@ echo "</div>";
 ?>
 
 <div class = "contacto_info">
-	Para información adicional escríbenos a proartistamr@gmail.com, o contáctanos a través de los números: 04142559895 o 04142027777.
+	Para información adicional o soporte, escríbenos a proartistamr@gmail.com.
 </div>
 <div class= "chiclet"></div>
 <?php echo "</div>";?>

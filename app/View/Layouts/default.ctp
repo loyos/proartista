@@ -140,7 +140,7 @@ $cakeDescription = "ProArtista";
 					'class' => ''
 				));
 				echo '| ';
-				echo $this->Html->link('Loquesea ',array(
+				echo $this->Html->link('Condiciones ',array(
 					'controller' => 'index',
 					'action' => 'terminos',
 				),array(
