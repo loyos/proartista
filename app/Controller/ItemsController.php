@@ -34,9 +34,13 @@ class ItemsController extends AppController {
 				),
 
 			);
-			// $genero = $this->Genero->find('list');
-			// $this->set(compact('genero'));
-			// $this->set('generos', $this->Genero->find('list'));
+			$generos = $this->Genero->find('list', array(
+				'fields' => array('Genero.nombre',  'Genero.nombre'),
+				'recursive' => -1	
+				)
+			);
+			$generos = array_merge(array('Todos'),$generos);
+			$this->set('generos', $generos);
 			$items = $this->paginate('Item');
 			$this->set(compact('items'));
 
@@ -48,6 +52,15 @@ class ItemsController extends AppController {
     }
 
 	public function find($subcategoria_id = null, $categoria_id = null){
+		
+		$generos = $this->Genero->find('list', array(
+				'fields' => array('Genero.nombre',  'Genero.nombre'),
+				'recursive' => -1	
+				)
+			);
+			$generos = array_merge(array('Todos'),$generos);
+			$this->set('generos', $generos);
+		
 		$this->modelClass = 'Item';
 
 		$parameter = $this->passedArgs;

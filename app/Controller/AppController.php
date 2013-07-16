@@ -51,12 +51,17 @@ class AppController extends Controller {
 		Security::setHash('md5');
 		$this->Auth->allow('*');
 		@Controller::loadModel('Categoria'); 
-		@Controller::loadModel('Subcategoria'); 
+		@Controller::loadModel('Subcategoria');
+		@Controller::loadModel('Publicidad');
 			  //     var $uses = array('Categoria','Subcategoria');
 		
 		$categorias = $this->Categoria->find('all', array(
 			'order' => 'orden'
 		));
+		
+		$publicidad = $this->Publicidad->find('all');
+		$this->set('publicidad', $publicidad);
+		
 		foreach ($categorias as $cat) {
 			$subcat[] = $cat['Subcategoria'];
 		}

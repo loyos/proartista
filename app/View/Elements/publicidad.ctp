@@ -1,14 +1,15 @@
 <div class="publicidad_izq">
 
-	<!-- <div class="barra_publicidad">
-		<?php
-			// echo $this->Html->image("publicidad/gibson1.jpg", array(
-				// 'width' => '215px',
-				// 'height' => '220px',
-				// "alt" => "Brownies",
-				// 'url' => 'http://www.gibson.com'
-			// ));
-		?>
-	</div>
-	-->
+	<?php foreach ($publicidad as $publi) { ?>
+		 <div class="barra_publicidad">			
+			<?php
+				echo $this->Html->image("publicidad/".$publi['Publicidad']['imagen'], array(
+					'width' => '215px',
+					'height' => '220px',
+					'url' => 'https://'. $publi['Publicidad']['url']
+				));
+			?>
+		</div>
+	<?php } ?>
+	
 </div>

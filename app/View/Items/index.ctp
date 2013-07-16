@@ -2,7 +2,9 @@
 		
 		<?php
 			if(!empty($items)){
-				echo $this->element('search');
+				echo $this->element('search', array(
+					'genero' => $generos
+				));
 				// debug($items);
 			}
 		?>

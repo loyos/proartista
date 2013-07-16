@@ -25,14 +25,14 @@
 			echo "Género";
 			echo "</td>";
 			echo "<td>";
-			// echo $this->Form->input('genero');
 			echo $this->Form->input('genero', array('div' => false, 'label' => false,
-				'options' => array(
-					null => 'Todos',
-					'ROCK' => 'ROCK',
-					'PUNK' => 'PUNK',
-					'POP' => 'POP '
-				)));
+				// 'options' => array(
+					// null => 'Todos',
+					// 'ROCK' => 'ROCK',
+					// 'PUNK' => 'PUNK',
+					// 'POP' => 'POP '
+				// )
+				));
 			echo "</td></tr>";
 			echo "</table>";
 			echo $this->Form->hidden('subcategoria_id', array('value' => $titulo['Subcategoria']['id']));

@@ -122,7 +122,7 @@ $cakeDescription = "ProArtista";
 		<div id="content">
 			<?php
 				echo $this->Session->flash();
-				echo $this->element('publicidad'); // aqui mandaremos el nivel que viene de appcontroller
+				echo $this->element('publicidad', array('publicidad' => $publicidad)); // aqui mandaremos el nivel que viene de appcontroller
 				echo $this->fetch('content');
 			?>
 			<div class= "chiclet"></div>

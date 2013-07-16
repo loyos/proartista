@@ -42,7 +42,7 @@
 			echo '<tr>';
 			echo '<td>Link</td>';
 			echo '<td>';
-			echo $this->Form->input('Publicidad.link',array('label'=>false));
+			echo $this->Form->input('Publicidad.url',array('label'=>false));
 			echo '</td>';
 			echo '</tr>';
 			 echo '</table>';
