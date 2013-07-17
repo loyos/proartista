@@ -53,7 +53,8 @@
 </div>
 <div class="container_right">
 	<div class="title_descripcion">
-		<?php echo $item['Item']['alias'];?>
+		<span class="title_span"><?php echo $item['Subcategoria']['alias'] ?>:</span>
+		<span style="color:white"><?php echo $item['Item']['alias'] ?></span>
 	</div>
 	<div class="content_descripcion">
 		<?php

@@ -19,7 +19,7 @@ class ContactosController extends AppController {
 			$Email = new CakeEmail();
 			$Email->from(array('me@example.com' => 'Proartista.com'));
 			$Email->emailFormat('html');
-			$Email->to('ppaola1409@gmail.com');
+			$Email->to('proartistamr@gmail.com');
 			$Email->subject('Te han contactado de proartista');
 			$Email->template('contacto');
 			$Email->viewVars(compact('nombre','apellido','email','mensaje'));

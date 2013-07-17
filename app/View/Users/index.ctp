@@ -57,9 +57,20 @@
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php echo $i['Item']['alias']?>
 				<br>
-				<span class="Fuente_Texto">GENERO:</span>
+				<span class="Fuente_Texto">
+				<?php if ($i['Subcategoria']['categoria_id'] == 1) {
+					echo 'GÉNERO:';
+				} else {
+					echo 'CATEGORIA:';
+				}?>
+				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
-				<?php echo $i['Item']['genero']?>
+				<?php 
+				if ($i['Subcategoria']['categoria_id'] == 1) {
+					echo $i['Item']['genero'];
+				} else {
+					echo $i['Subcategoria']['alias'];
+				}?>
 				<br>
 				<span class="Fuente_Texto">CIUDAD:</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">

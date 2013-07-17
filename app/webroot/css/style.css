@@ -433,6 +433,7 @@ img.image_txt {
 	font-size: 16px;
 	font-weight: bold;
 	width: 295px;
+	margin-top: -38px;
 }
 
 .title {
@@ -441,7 +442,6 @@ img.image_txt {
 
 .title_descripcion {
 	font-size: 24px;
-	margin-left: 124px;
 }
 
 .descripcion_span {
