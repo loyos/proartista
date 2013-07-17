@@ -31,7 +31,7 @@ echo $this->Form->input('mensaje',array(
 	'label' => false
 ));
 echo '</td></tr></table>';
-echo $this->Form->submit('Entrar', array('class' => 'button'));
+echo $this->Form->submit('Enviar', array('class' => 'button'));
 echo $this->Form->end;
 echo "</div>";
 ?>

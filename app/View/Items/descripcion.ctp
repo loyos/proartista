@@ -63,6 +63,10 @@
 			echo '<span class="descripcion_span">'.$item['Item']['genero'].'</span>';
 			echo '</p>';
 		}
+		if (!empty($item['Item']['especialidad'])) {
+			echo '<span class="title_span">Especialidad:</span>';
+			echo '<span class="descripcion_span">'.$item['Item']['especialidad'].'</span>';
+		}
 		if (!empty($item['Item']['ciudad'])) {
 			echo '<p>';
 			echo '<span class="title_span">Ciudad:</span>';
@@ -107,7 +111,7 @@
 		if (!empty($item['Item']['descripcion'])) {
 			echo '<span class="title_span">Estan en busca:</span>';
 			echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
-		}
+		}		
 		?>
 	</div>
 </div>

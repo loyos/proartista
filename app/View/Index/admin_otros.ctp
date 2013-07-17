@@ -45,7 +45,7 @@
 	<table style= "width: 688px; border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 10px;">
 		<tr style= "padding: 10px;">
 			<td>
-			Términos:
+			Preguntas Frecuentes:
 			</td>
 		</tr>
 		<tr>

@@ -18,7 +18,7 @@
 
 $cakeDescription = "ProArtista";
 ?>
-<!DOCTYPE html>	
+<!DOCTYPE html>
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
@@ -133,14 +133,14 @@ $cakeDescription = "ProArtista";
 			<div class= "footer_content_left">
 				
 				<?php 
-				echo $this->Html->link('Términos de Privacidad ',array(
+				echo $this->Html->link('Políticas, Condiciones y Términos de Privacidad ',array(
 					'controller' => 'index',
 					'action' => 'politicas',
 				),array(
 					'class' => ''
 				));
 				echo '| ';
-				echo $this->Html->link('Condiciones ',array(
+				echo $this->Html->link('Preguntas Frecuentes',array(
 					'controller' => 'index',
 					'action' => 'terminos',
 				),array(
@@ -165,6 +165,7 @@ $cakeDescription = "ProArtista";
 						Síguenos: &nbsp;
 						<?php echo $this->Html->image('logos/twitter_logo.png', array('width' => '25px', 'url' => 'https://twitter.com/Proartistavzla')); ?>
 						<?php echo $this->Html->image('logos/facebook_logo.png', array('width' => '25px', 'url' => 'http://www.facebook.com/pages/Proartista/312370288878275?fref=ts')); ?>
+						<?php echo $this->Html->image('logos/Instagram.png', array('width' => '28px', 'url' => 'https://twitter.com/Proartistavzla')); ?>
 					</span>
 				</p>
 			</div>

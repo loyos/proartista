@@ -85,7 +85,11 @@ class UsersController extends AppController {
 		$items = $this->Item->find('all',array(
 			'conditions' => array('Item.user_id' => $user_id)
 		));
-		
+		$user_info = $this->User->find('first',array(
+			'conditions' => array('User.id' => $user_id),
+			'recursive' => -1
+		));
+		$this->set(compact('user_info'));
 		$this->set(compact('items'));
 	}
 	

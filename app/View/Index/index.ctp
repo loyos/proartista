@@ -19,9 +19,9 @@
 		<br><br>
 		<div class = "buttons_index">
 		<?php 
-		echo $this->Html->link('Contáctanos',array(
-			'controller' => 'contactos',
-			'action' => 'index',
+		echo $this->Html->link('Como empezar..',array(
+			'controller' => 'index',
+			'action' => 'como_empezar',
 		),array(
 			'class' => 'button'
 		));

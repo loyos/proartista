@@ -1,17 +1,38 @@
 <div class="index box">
-	<div class="title_izquierda">
+	<div class="title" style="margin-left: auto; margin-right: auto; width: 200px;">
+	<h2>Mi Perfil</h2>
+	</div>
+	
+	<div>
+		<?php echo $this->Html->link('Editar',array(
+			'controller' => 'users',
+			'action' => 'editar',$user_id
+		));?>
+	</div>
+	<div class="content_items content_items_publicaciones">
+		<table width = "400px" style = "margin-left: auto; margin-right: auto;" >
+			<tr>
+				<td  class = "amarillito" >Nombre: </td> <td><?php echo $user_info['User']['nombre']; ?></td>  <td class = "amarillito" >Email: </td> <td><?php echo $user_info['User']['email']; ?></td>  
+			</tr>
+			<tr>
+				<td class = "amarillito">Apellido: </td> <td><?php echo $user_info['User']['apellido']; ?></td> <td class = "amarillito">Teléfono: </td> <td><?php echo $user_info['User']['telefono']; ?></td>
+			</tr>
+			<tr>
+				<td class = "amarillito">Username: </td> <td><?php echo $user_info['User']['username']; ?></td>
+			</tr>
+		</table>
+	</div>
+	
+	
+	
+	<div class="title" style="margin-left: auto; margin-right: auto; width: 200px;">
+	<h2>Mis publicaciones</h2>
+	</div>
+	
+	<div>
 		<?php echo $this->Html->link('Agregar nueva publicación',array(
 			'controller' => 'items',
 			'action' => 'editar'
-		));?>
-	</div>
-	<div class="title" style="float:left;margin-left: 15%;">
-	<h2>Tus publicaciones</h2>
-	</div>
-	<div class="title_derecha">
-		<?php echo $this->Html->link('Actualizar tus datos',array(
-			'controller' => 'users',
-			'action' => 'editar',$user_id
 		));?>
 	</div>
 	

@@ -6,7 +6,7 @@ class IndexController extends AppController {
 	
 	 public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('index','contacto','quienes_somos', 'terminos', 'politicas'); // Letting users register themselves
+		$this->Auth->allow('index','contacto','quienes_somos', 'terminos', 'politicas', 'como_empezar'); // Letting users register themselves
 	}
 
     public function index() {
@@ -32,6 +32,10 @@ class IndexController extends AppController {
 	function terminos(){
 		$terminos = $this->Config->find('first');
 		$this->set(compact('terminos'));
+	}
+	
+	function como_empezar(){
+		
 	}
 	
 	function admin_index() {

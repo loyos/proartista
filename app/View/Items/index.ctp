@@ -88,6 +88,9 @@
 				<td class="Bold" width="auto" valign="top" height="63" align="left">
 					<span class="Fuente_Texto">Interés en:</span>
 					<?php echo $item['Item']['descripcion']?>
+					<br>
+					<span class="Fuente_Texto">Especialidad:</span>
+					<?php echo $item['Item']['especialidad']?>
 				</td>
 				</tr>
 				</table>
