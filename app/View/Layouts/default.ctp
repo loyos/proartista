@@ -165,7 +165,7 @@ $cakeDescription = "ProArtista";
 						Síguenos: &nbsp;
 						<?php echo $this->Html->image('logos/twitter_logo.png', array('width' => '25px', 'url' => 'https://twitter.com/Proartistavzla')); ?>
 						<?php echo $this->Html->image('logos/facebook_logo.png', array('width' => '25px', 'url' => 'http://www.facebook.com/pages/Proartista/312370288878275?fref=ts')); ?>
-						<?php echo $this->Html->image('logos/instagram.png', array('width' => '28px', 'url' => 'https://twitter.com/Proartistavzla')); ?>
+						<?php echo $this->Html->image('logos/instagram.png', array('width' => '28px', 'url' => 'https://instagram.com/Proartistavzla')); ?>
 					</span>
 				</p>
 			</div>
