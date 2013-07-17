@@ -159,6 +159,7 @@ class ItemsController extends AppController {
 		if ($listo) {
 			$data = $this->Item->findById($item_id);
 			$username = $this->Auth->user('username');
+			$alias = $data['Item']['alias'];
 			$Email = new CakeEmail();
 			$Email->from(array('me@example.com' => 'Proartista.com.ve'));
 			$Email->emailFormat('html');
@@ -167,6 +168,16 @@ class ItemsController extends AppController {
 			$Email->template('solicitud_publicacion');
 			$Email->viewVars(compact('username'));
 			$Email->send();
+		
+		
+			$Email->from(array('me@example.com' => 'Proartista.com.ve'));
+			$Email->emailFormat('html');
+			$Email->to('proartistamr@gmail.com');
+			$Email->subject('Nueva solicitud');
+			$Email->template('nueva_publicacion');
+			$Email->viewVars(compact('username','alias'));
+			$Email->send();
+			
 			$this->Session->setFlash("Pronto recibirás un email con la aprobación de tu publicación.", 'success');
 			$this->redirect(array('controller'=>'users','index'=>'index'));
 		}
