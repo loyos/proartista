@@ -339,7 +339,12 @@ function genero3_change(){
 			'after' => '*'
 		));
 		echo '</td>';
-		echo '<tr><td></td><td></td><td class="musica_genero2">2º Genero</td><td class="musica_genero2">';
+		echo '<tr><td>Especialidad</td><td>';
+	    echo $this->Form->input('especialidad', array(
+			'label' => false
+		));
+		echo '</td>';
+		echo '<td class="musica_genero2">2º Genero</td><td class="musica_genero2">';
 		echo $this->Form->input('genero_dos', array(
 			'id' => 'genero2',
 			'label' => false,
