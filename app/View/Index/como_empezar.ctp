@@ -6,7 +6,8 @@ echo '</div>';
 ?>
 
 <div class = "contenido">
-<?php echo "Aquí van los pasos de como empezar";?>
+<?php
+ echo $como_empezar['Config']['como_empezar'];?>
 
 </div>
 

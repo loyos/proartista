@@ -35,7 +35,8 @@ class IndexController extends AppController {
 	}
 	
 	function como_empezar(){
-		
+		$como_empezar = $this->Config->find('first');
+		$this->set(compact('como_empezar'));
 	}
 	
 	function admin_index() {
@@ -51,7 +52,7 @@ class IndexController extends AppController {
 			}
 		// $data_qs = explode('<div',$data['Config']['index_quienes_somos']);
 		// $data['Config']['index_quienes_somos'] = $data_qs[0];
-			$data['Config']['index_quienes_somos'] =  str_replace("<p>","",$data['Config']['index_quienes_somos']);
+			$data['Config']['como_empezar'] =  str_replace("<p>","",$data['Config']['como_empezar']);
 			$data['Config']['index_quienes_somos'] =  str_replace("</p>","",$data['Config']['index_quienes_somos']);
 			$this->Config->save($data);
 			$this->Session->setFlash('Se ha actualizado con éxito','success');

@@ -30,6 +30,8 @@
 					},200);
 				}
 			});
+		var ancho = $('.slide img').css('width');
+		console.debug(ancho);
 		});
 	</script>
 <div class="index box">
@@ -40,7 +42,9 @@
 			<?php
 				foreach ($item['Imagen'] as $imagen) { ?>
 					<div class="slide">
-						<?php echo $this->Html->image('galeria/'.$imagen['imagen'], array('height'=>'250px', 'width' => '350px')); ?>
+						<div class = "prueba">
+							<?php echo $this->Html->image('galeria/'.$imagen['imagen'], array('height'=>'250px', 'max-width' => '100%')); ?>
+						</div>
 					</div>
 				<?php
 				}
@@ -56,6 +60,8 @@
 		<span class="title_span"><?php echo $item['Subcategoria']['alias'] ?>:</span>
 		<span style="color:white"><?php echo $item['Item']['alias'] ?></span>
 	</div>
+	<br>
+	<br>
 	<div class="content_descripcion">
 		<?php
 		if (!empty($item['Item']['genero'])) {

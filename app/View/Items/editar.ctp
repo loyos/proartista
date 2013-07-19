@@ -22,9 +22,9 @@ function genero(){
 			$('#genero1').append($("<option></option>").attr("value", '').text('Selecciona un Género'));
 			$.each(msg, function(i,a){
 				if (a.Genero.nombre == '<?php echo $gen_uno?>') {
-					$('#genero1').append($("<option selected=selected ></option>").attr("value", a.Genero.nombre).text(a.Genero.nombre)); 
+					$('#genero1').append($("<option selected=selected ></option>").attr("value", a.Genero.nombre).text(a.Genero.nombre));
 				} else {
-					$('#genero1').append($("<option></option>").attr("value", a.Genero.nombre).text(a.Genero.nombre)); 
+					$('#genero1').append($("<option></option>").attr("value", a.Genero.nombre).text(a.Genero.nombre));
 				}
 			});
 		});
@@ -298,24 +298,39 @@ function genero3_change(){
 			'after' => '*'
 		));
 		echo '</td>';
-		echo '<td>Email</td><td>';
+		/*echo '<td>Email</td><td>';
 		echo $this->Form->input('email', array(
 			'label' => false,
 			'value' => $datos_usuario['User']['email'],
 			'after' => '*'
 		));
-		echo '</td></tr>';
+		echo '</td>';*/
+		echo '<td>Especialidad</td><td>';
+	    echo $this->Form->input('especialidad', array(
+			'label' => false,
+			'id' =>'especialidad'
+		));
+		echo '</td>';
+		echo '</tr>';
 		echo '<tr><td>Teléfono</td><td>';
 		echo $this->Form->input('telefono', array(
 			'label' => false,
 			'value' => $datos_usuario['User']['telefono']
 		));
 		echo '</td>';
-		echo '<td>Facebook</td><td>';
+		/*echo '<td>Facebook</td><td>';
 		echo $this->Form->input('facebook', array(
 			'label' => false,
 		));
-		echo '</td></tr>';
+		echo '</td>*/
+		echo '<td>Email</td><td>';
+		echo $this->Form->input('email', array(
+			'label' => false,
+			'value' => $datos_usuario['User']['email'],
+			'after' => '*'
+		));
+		echo '</td>';
+		echo '</tr>';
 		echo '<tr><td>Twitter</td><td>';
 		echo $this->Form->input('twitter', array(
 			'label' => false
@@ -339,11 +354,13 @@ function genero3_change(){
 			'after' => '*'
 		));
 		echo '</td>';
-		echo '<tr><td>Especialidad</td><td>';
-	    echo $this->Form->input('especialidad', array(
-			'label' => false
+		echo '<tr>';
+		echo '<td>Facebook</td><td>';
+		echo $this->Form->input('facebook', array(
+			'label' => false,
 		));
 		echo '</td>';
+		
 		echo '<td class="musica_genero2">2º Genero</td><td class="musica_genero2">';
 		echo $this->Form->input('genero_dos', array(
 			'id' => 'genero2',
@@ -377,7 +394,8 @@ function genero3_change(){
 			));
 		}
 		
-		echo '<span style= "font-size: 14px;"> Los campos señalados con <span style = "color:red; font-size: 30px; position: relative; top: 10px;"> * </span> son obligatorios </span><br>'; 
+		echo '<span style= "font-size: 14px;"> - Los campos señalados con <span style = "color:red; font-size: 30px; position: relative; top: 10px;"> * </span> son obligatorios </span><br>';
+		echo '<span style= "font-size: 14px;"> - En "Especialidad", introduce palabras claves específicas de tu categoría, de esta forma facilitas que tu publicación sea encontrada.  </span><br>'; 
 		echo $this->Form->submit('Siguiente', array('class' => 'button'));
 		echo $this->Form->end;
 		
@@ -402,6 +420,23 @@ $(document).ready(function() {
 			$this.val('(Por ejemplo: Historia, experiencia, estudios realizados, actividades recientes y a futuro y/o presentaciones)');
 		}
 	});
+	
+	if($('#especialidad').val() == ''){
+		$('#especialidad').val('(Palabras clave)');
+	}
+	$('#especialidad').on('focus', function(){
+		var $this = $(this);
+		if($this.val() == '(Palabras clave)'){
+			$this.val('');
+		}
+	});
+	$('#especialidad').on('blur', function(){
+		var $this = $(this);
+		if($this.val() == ''){
+			$this.val('(Palabras clave)');
+		}
+	});
+	
 	if($('#en_busca').val() == ''){
 		$('#en_busca').val('(Rellene este cuadro solo si se encuentra en búsqueda de un integrante o artista, así como otro tipo de personal especializado para cumplir sus intereses)');
 	}

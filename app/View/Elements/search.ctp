@@ -21,18 +21,21 @@
 					'valencia' => 'Valencia'
 				)));
 			echo "</td></tr>";
-			echo "<tr><td>";
-			echo "Género";
-			echo "</td>";
-			echo "<td>";
-			echo $this->Form->input('genero', array('div' => false, 'label' => false,
-				// 'options' => array(
-					// null => 'Todos',
-					// 'ROCK' => 'ROCK',
-					// 'PUNK' => 'PUNK',
-					// 'POP' => 'POP '
-				// )
-				));
+			if($titulo['Subcategoria']['alias'] == 'BANDAS'){
+				echo "<tr><td>";
+				echo "Género";
+				echo "</td>";
+				echo "<td>";
+				echo $this->Form->input('genero', array('div' => false, 'label' => false
+					));
+			}else{
+				echo "<tr><td>";
+				echo "Especialidad";
+				echo "</td>";
+				echo "<td>";
+				echo $this->Form->input('especialidad', array('div' => false, 'label' => false
+					));
+			}
 			echo "</td></tr>";
 			echo "</table>";
 			echo $this->Form->hidden('subcategoria_id', array('value' => $titulo['Subcategoria']['id']));

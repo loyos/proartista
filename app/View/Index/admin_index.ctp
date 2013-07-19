@@ -8,6 +8,25 @@
 	<?php
 		echo $this->Form->create(null);
 	?>
+	
+	<table style= "width: 688px; border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 10px;">
+		<tr style= "padding: 10px;">
+			<td>
+			Como empezar:
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<?php
+				echo $this->Form->input('Config.como_empezar',array(
+					'label' => false
+				));
+				?>
+			</td>
+		</tr>
+	</table>
+	<br><br>
+	
 	<table style= "width: 688px; border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 10px;">
 		<tr style= "padding: 10px;">
 			<td>

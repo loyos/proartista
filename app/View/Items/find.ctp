@@ -79,18 +79,17 @@
 				<?php echo $item['Item']['alias']?>
 				<br>
 				<span class="Fuente_Texto">
-				<?php if ($item['Subcategoria']['categoria_id'] == 1) {
-					echo 'GÉNERO:';
+				<?php
+				if ($item['Subcategoria']['id'] == 1) {
+					echo 'BANDA. GÉNERO:';
 				} else {
-					echo 'CATEGORIA:';
+					echo $item['Subcategoria']['alias'];
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php 
-				if ($item['Subcategoria']['categoria_id'] == 1) {
+				if ($item['Subcategoria']['id'] == 1) {
 					echo $item['Item']['genero'];
-				} else {
-					echo $item['Subcategoria']['alias'];
 				}?>
 				<br>
 				<span class="Fuente_Texto">CIUDAD:</span>

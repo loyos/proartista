@@ -8,7 +8,8 @@ class Item extends AppModel {
 		'ciudad' => array('type' => 'like'),
 		'subcategoria_id' => array('type' => 'value'),
 		'genero' => array('type' => 'like'),
-		'status' => array('type' => 'like')
+		'status' => array('type' => 'like'),
+		'especialidad' => array('type' => 'like'),
 		);
 
 	public function orConditions($data = array()) {
