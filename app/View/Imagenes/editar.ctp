@@ -47,8 +47,8 @@
 			Aquí podrás cambiar tu imagen principal, así como las imagenes que quieras mostrar en tu publicación.<br><br>
 			1) Agrega tu imagen principal.<br><br>
 			2) Agrega de 1 a 4 fotos para tú galeria(opcional).<br><br>
-			3) Presiona el botón guardar.<br><br>
-			4) Si estás conforme presiona el botón finalizar.
+			3) Presiona el botón guardar fotos.<br><br>
+			4) Si estás conforme presiona el botón finalizar publicación.
 		</div>
 	<?php
 	echo '<table cellspacing="0" cellpadding="10" style = "margin-top: 40px; clear: left;  border-top: 1px solid #F29100">';
@@ -173,9 +173,9 @@
 		echo $this->Html->image('loading.gif', array('width'=>'100px', 'id' => 'loading'));
 	echo "</div>";
 	
-	echo $this->Form->submit('Guardar', array('class' => 'button'));
+	echo $this->Form->submit('Cargar Fotos', array('class' => 'button'));
 	echo '<div class="submit link_listo">';
-	echo $this->Html->link('Finalizar',array('controller'=>'items','action'=>'editar',$item_id,true), array('class'=>'button','style'=>"margin-top:10px"));	
+	echo $this->Html->link('Finalizar Publicación',array('controller'=>'items','action'=>'editar',$item_id,true), array('class'=>'button','style'=>"margin-top:10px"));	
 	echo '</div>';
 	echo $this->Form->end;
 	?>

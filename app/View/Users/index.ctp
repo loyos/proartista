@@ -9,7 +9,7 @@
 			'action' => 'editar',$user_id
 		));?>
 	</div>
-	<div class="content_items content_items_publicaciones">
+	<div class="content_items content_items_publicaciones profile">
 		<table width = "400px" style = "margin-left: auto; margin-right: auto;" >
 			<tr>
 				<td  class = "amarillito" >Nombre: </td> <td><?php echo $user_info['User']['nombre']; ?></td>  <td class = "amarillito" >Email: </td> <td><?php echo $user_info['User']['email']; ?></td>  
@@ -42,14 +42,23 @@
 			?><div class="content_items content_items_publicaciones">
 			<table class="publicaciones" border="1">
 				<tr>
-				<td width="61" valign="top" height="63">
+				<td >
 				<?php 
-				echo $this->Html->link($this->Html->image('logos/'.$i['Item']['logo'], array('width'=>'57px','height'=>'57px')),array(
-					'controller' => 'items',
-					'action' => 'descripcion',$i['Item']['id']
-				),array(
-					'escape' =>false
-				));
+				if(empty($i['Item']['logo'])){
+						echo $this->Html->link($this->Html->image('no_image.jpg', array('width'=>'80px','height'=>'80px')),array(
+						'controller' => 'items',
+						'action' => 'descripcion',$i['Item']['id']
+					),array(
+						'escape' =>false
+					));
+				}else{
+					echo $this->Html->link($this->Html->image('logos/'.$i['Item']['logo'], array('width'=>'80px','height'=>'80px')),array(
+						'controller' => 'items',
+						'action' => 'descripcion',$i['Item']['id']
+					),array(
+						'escape' =>false
+					));
+				}
 				?>
 				</td>
 				<td class="Bold" valign="top" align="left">

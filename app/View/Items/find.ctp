@@ -57,14 +57,14 @@
 				<td width="61" valign="top" height="63">
 				<?php
 				if(empty($item['Item']['logo'])){
-						echo $this->Html->link($this->Html->image('no_image.jpg', array('width'=>'57px','height'=>'57px')),array(
+						echo $this->Html->link($this->Html->image('no_image.jpg', array('width'=>'80px','height'=>'80px')),array(
 						'controller' => 'items',
 						'action' => 'descripcion',$item['Item']['id']
 					),array(
 						'escape' =>false
 					));
 				}else{
-					echo $this->Html->link($this->Html->image('logos/'.$item['Item']['logo'], array('width'=>'57px','height'=>'57px')),array(
+					echo $this->Html->link($this->Html->image('logos/'.$item['Item']['logo'], array('width'=>'80px','height'=>'80px')),array(
 						'controller' => 'items',
 						'action' => 'descripcion',$item['Item']['id']
 					),array(
