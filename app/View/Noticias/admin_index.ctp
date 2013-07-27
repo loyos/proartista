@@ -11,11 +11,12 @@
 	<?php
 	if (!empty($noticias)){
 		foreach ($noticias as $n) {
-			echo '<table style= "width: 688px; border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 10px;">';
-			echo '<tr style="color: #CC9900;"><td>Titulo</td><td>Noticia</td><td>Acciones</td></tr>';
+			echo '<table style= " border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 10px;">';
+			echo '<tr style="color: #CC9900;"><td style="padding: 10px; text-align:center">Titulo</td><td style="padding: 10px; text-align:center">Descripción breve</td><td style="padding: 10px; text-align:center">Noticia</td><td style="padding: 10px; text-align:center">Acciones</td></tr>';
 			echo '<tr>';
-			echo '<td>'.$n['Noticia']['titulo'].'</td>';
-			echo '<td>'.$n['Noticia']['noticia'].'</td>';
+			echo '<td style="padding: 10px;">'.$n['Noticia']['titulo'].'</td>';
+			echo '<td style="width: 200px;padding: 10px;">'.$n['Noticia']['descripcion_breve'].'</td>';
+			echo '<td style="padding: 10px;">'.$n['Noticia']['noticia'].'</td>';
 			echo '<td>';
 			echo $this->Html->link('Editar',array('action' => 'admin_editar',$n['Noticia']['id']));
 			echo '<br>';

@@ -21,6 +21,14 @@ echo $this->Form->input('titulo',array(
 echo '</td>';
 echo '</tr>';
 echo '<tr>';
+echo '<td>Descripcion breve</td>';
+echo '<td>';
+echo $this->Form->input('descripcion_breve',array(
+	'label' => false
+));
+echo '</td>';
+echo '</tr>';
+echo '<tr>';
 echo '<td>Noticia</td>';
 echo '<td>';
 echo $this->Form->input('noticia',array(

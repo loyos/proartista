@@ -10,7 +10,7 @@ function genero(){
 	var genero_dos = $('#genero2').val();
 	var genero_tres = $('#genero3').val();
 	if (jQuery.inArray(subcat, x) >= 0) {
-			$.ajax({
+		$.ajax({
 				type: "POST",
 				url: "/items/genero.json",
 				data: { genero_uno: genero_uno, genero_dos: genero_dos, genero_tres : genero_tres },

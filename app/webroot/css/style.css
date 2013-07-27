@@ -437,7 +437,7 @@ img.image_txt {
 	margin-left:300px;
 }
 
-.Fuente_Texto {
+.Fuente_Texto, .Fuente_Texto a {
 	color:#c90;
 	font-weight: bold;
 }
@@ -788,4 +788,14 @@ ul#slide_frase {
 #slide_frase li {
 	color:white;
 	list-style:none;
+}
+
+.ver_mas {
+	font-size:12px;
+}
+
+.noticia {
+	margin: auto;
+	width: 561px;
+	margin-bottom:20px;
 }

@@ -282,7 +282,11 @@
 </div>
 </div>
 <div class="actual"> 
-	<?php echo $this->Html->Image("actual.png");?>
+	<?php echo $this->Html->link($this->Html->Image("actual.png"),array(
+		'action' => 'noticias'
+		),
+		array('escape' => false)
+	);?>
 	<table width="438" border="0">
 		<?php
 		$now = date('Y/m/d');
@@ -294,12 +298,14 @@
 			<td width="221" align="left" style="font-size: 12px; font-weight: bold; text-align: left; font-family: 'Arial Black', Gadget, sans-serif; color: #FFF;">
 				<span style="color: #F29100; font-weight: bold; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 16px;"><?php echo $n['Noticia']['titulo']?> </span>
 				<?php $timestamp = strtotime($n['Noticia']['fecha']); ?>
-				<span style="color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;"><?php echo date('d/m/Y', $timestamp);?> </span>				
+				<span style="color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;"><?php echo date('d/m/Y', $timestamp);?> </span>
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align: left; font-size: 14px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; color: #FFF;" colspan="2">
-			<?php echo $n['Noticia']['noticia']?>
+			<td  width="221" style="text-align: left; font-size: 14px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; color: #FFF;">
+			<?php echo $n['Noticia']['descripcion_breve']?>
+			<span style="color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;">
+			<?php echo $this->Html->link('+Ver mas',array('action' => 'noticias',$n['Noticia']['id']))?> </span>
 			</td>
 		</tr>
 		<tr>

@@ -22,21 +22,23 @@ class UsersController extends AppController {
 			$user = $this->User->find('first',array(
 				'conditions' => array('User.activo' => 1, 'User.username' => $this->data['User']['username'])
 			));
-			if ($this->Auth->login() && (!empty($user))) {
-				$role = $this->Auth->user('role');
-				$name = $this->Auth->user('nombre');
-				if ($role == 'usuario') {
-					$this->Session->setFlash(__('Bienvenido'. ' ' . $name), 'success');
-					$this->redirect(array(
-						'controller' => 'users',
-						'action' => 'index'
-					));
-				} elseif ($role=='admin') {
-					$this->Session->setFlash(__('Bienvenido '. $name), 'success');
-					$this->redirect(array(
-						'controller' => 'users',
-						'action' => 'admin_index'
-					));
+			if (!empty($user)) {
+				if ($this->Auth->login()) {
+					$role = $this->Auth->user('role');
+					$name = $this->Auth->user('nombre');
+					if ($role == 'usuario') {
+						$this->Session->setFlash(__('Bienvenido'. ' ' . $name), 'success');
+						$this->redirect(array(
+							'controller' => 'users',
+							'action' => 'index'
+						));
+					} elseif ($role=='admin') {
+						$this->Session->setFlash(__('Bienvenido '. $name), 'success');
+						$this->redirect(array(
+							'controller' => 'users',
+							'action' => 'admin_index'
+						));
+					}
 				}
 			} else {
 				$this->Session->setFlash(__('El nombre de usuario o contraseña son invalidos, vuelve a intentarlo'), 'success');
@@ -139,13 +141,13 @@ class UsersController extends AppController {
 				'activo' => 1
 			));
 			if ($this->User->save($update)) {
-				$this->Session->setFlash('Cuenta validada', 'success');
+				$this->Session->setFlash('Cuenta validada, ahora ya puedes iniciar sesión y agregar una publicación', 'success');
 				//$this->redirect(array('controller'=>'users','action'=>'login',$existe));
 			}
 		} else {
 			$this->Session->setFlash('Link de validación inválido', 'success');
 		}
-		$this->redirect(array('controller'=>'index','action'=>'index'));
+		$this->redirect(array('action'=>'login'));
 	}
 	
 	function cambiar_password(){

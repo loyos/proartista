@@ -1,12 +1,12 @@
 <?php
 class IndexController extends AppController {
     public $helpers = array('Html', 'Form', 'Session');
-    public $components = array('Session');
-	public $uses = array('Item','Noticia','Config','Frase','User');	
+    public $components = array('Session','RequestHandler');
+	public $uses = array('Item','Noticia','Config','Frase','User','Noticia');	
 	
 	 public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('index','contacto','quienes_somos', 'terminos', 'politicas', 'como_empezar'); // Letting users register themselves
+		$this->Auth->allow('index','contacto','quienes_somos', 'terminos', 'politicas', 'como_empezar','noticias'); // Letting users register themselves
 	}
 
     public function index() {
@@ -97,6 +97,27 @@ class IndexController extends AppController {
 		));
 		$usuarios = count($usuarios);
 		$this->set(compact('publicaciones_activas','publicaciones_pendientes','totales','usuarios'));
+	}
+	
+	function noticias($id = null) {
+		$noticias = $this->Noticia->find('all');
+		$this->set(compact('noticias'));
+		if (!empty($id)) {
+			$noticia = $this->Noticia->findById($id);
+			$this->set(compact('noticia','id'));
+		}
+	}
+	
+	function buscar_noticia(){
+		$this->loadModel('Noticia');
+		$id = $_POST['id'];
+		$noticia = $this->Noticia->findById($id);
+		$titulo = $noticia['Noticia']['titulo'];
+		$desc = $noticia['Noticia']['noticia'];
+		$cadena = '<span class="Fuente_Texto">'.$titulo.'</span><br><span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">'.$desc.'</span>';
+		$this->autoRender = false;
+		$this->RequestHandler->respondAs('json');
+		echo json_encode($cadena);
 	}
 
 }
