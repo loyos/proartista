@@ -9,7 +9,6 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
 		parent::beforeFilter();
-		
 		if($this->Auth->User()){
 			$this->Auth->allow('add','cambiar_password','validacion_registro', 'logout'); // Letting users register themselves
 		}else{
@@ -54,24 +53,27 @@ class UsersController extends AppController {
 		if (!empty($this->data)) {
 			$data = $this->data;
 			$data['User']['clave_email'] = $this->generaPass();
-			if($this->User->save($data, array('validate' => 'first'))){
-				$email_register = $this->data['User']['email'];
-				$username = $this->data['User']['username'];
-				$nombre = $this->data['User']['nombre'];
-				$apellido = $this->data['User']['apellido'];
-				$clave = $data['User']['clave_email'];
-				$Email = new CakeEmail();
-				$Email->from(array('me@example.com' => 'Proartista.com'));
-				$Email->emailFormat('html');
-				$Email->to($email_register);
-				$Email->subject('Verifica tu cuenta');
-				$Email->template('registro');
-				$Email->viewVars(compact('username','apellido','nombre','clave'));
-				$Email->send();
-				$this->Session->setFlash(__('En breve recibirás un correo para validar tu cuenta'), 'success');
-				$this->redirect(array('controller'=>'index', 'action'=>'index'));
-			}else {
-				$this->Session->setFlash(__('Corrija los errores y vuelva a intentarlo'), 'success');
+			if ($data['User']['password'] == $data['User']['confirmacion']) {
+				$data['User']['username'] = $this->data['User']['email'];
+				if($this->User->save($data, array('validate' => 'first'))){
+						$email_register = $this->data['User']['email'];
+						$nombre = $this->data['User']['nombre'];
+						$clave = $data['User']['clave_email'];
+						$Email = new CakeEmail();
+						$Email->from(array('me@example.com' => 'Proartista.com'));
+						$Email->emailFormat('html');
+						$Email->to($email_register);
+						$Email->subject('Verifica tu cuenta');
+						$Email->template('registro');
+						$Email->viewVars(compact('username','apellido','nombre','clave'));
+						$Email->send();
+						$this->Session->setFlash(__('En breve recibirás un correo para validar tu cuenta'), 'success');
+						$this->redirect(array('controller'=>'index', 'action'=>'index'));
+				}else {
+					$this->Session->setFlash(__('Corrija los errores y vuelva a intentarlo'), 'success');
+				}
+			} else {
+					$this->Session->setFlash(__('El password no coincide con la confirmación'), 'success');	
 			}
 			// if($this->User->save($this->data, array('validate'=>'first'))){
 				// $this->Session->setFlash(__('El registro se realizó con éxito'));
@@ -185,8 +187,8 @@ class UsersController extends AppController {
 	function editar($user_id) {
 		if (!empty($this->data)) {
 			if (empty($this->data['User']['password'])){
-				$data = array('User', array(
-					'username'=>$this->data['User']['username'],
+				$data = array('User' => array(
+					'username'=>$this->data['User']['email'],
 					'nombre'=>$this->data['User']['nombre'],
 					'apellido'=>$this->data['User']['apellido'],
 					'email'=>$this->data['User']['email'],
@@ -196,9 +198,11 @@ class UsersController extends AppController {
 			} else {
 				$data = $this->data;
 			}
-			$this->User->save($data,array('validate'=>'first'));
+			var_dump($data);
+			if ($this->User->save($data)) {
 			$this->Session->setFlash('La actualización se realizó con éxito','success');
 			$this->redirect(array('controller'=>'users','action'=>'index'));
+			}
 		} else {
 			$this->data = $this->User->findById($user_id);
 		}

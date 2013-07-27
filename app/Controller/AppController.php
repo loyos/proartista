@@ -45,9 +45,13 @@ class AppController extends Controller {
     );
 	function beforeFilter() {
 		//var_dump($this->Auth->logoutRedirect); debug.die("dfdf");
+		$this->Auth->fields = array(
+            'username' => 'email',
+            'password' => 'password'
+           );
 		$user_id = $this->Auth->user('id');
 		$role = $this->Auth->user('role');
-		$username = $this->Auth->user('username');
+		$username = $this->Auth->user('nombre');
 		Security::setHash('md5');
 		$this->Auth->allow('*');
 		@Controller::loadModel('Categoria'); 

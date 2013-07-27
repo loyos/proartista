@@ -3,22 +3,16 @@
 	<div class = "login_form">
 		<?php
 			echo $this->Form->create('User');
-			echo '<table><tr><td>';
-			echo 'Nombre de Usuario:';
-			echo '</td><td>';
-			echo $this->Form->input('username',array(
+			echo '<table>';
+			echo '<tr><td>Email:</td><td>';
+			echo $this->Form->input('email',array(
 				'label' => false
 			));
-			echo '</td>';
+			echo '</td></tr>';
 			echo '<tr><td>Cambiar Password:</td><td>';
 			echo $this->Form->input('password',array(
 				'label' => false,
 				'value' => ''
-			));
-			echo '</td></tr>';
-			echo '<tr><td>Email:</td><td>';
-			echo $this->Form->input('email',array(
-				'label' => false
 			));
 			echo '</td></tr>';
 			echo '<tr><td>Nombre:</td><td>';

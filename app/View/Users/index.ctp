@@ -17,9 +17,6 @@
 			<tr>
 				<td class = "amarillito">Apellido: </td> <td><?php echo $user_info['User']['apellido']; ?></td> <td class = "amarillito">Teléfono: </td> <td><?php echo $user_info['User']['telefono']; ?></td>
 			</tr>
-			<tr>
-				<td class = "amarillito">Username: </td> <td><?php echo $user_info['User']['username']; ?></td>
-			</tr>
 		</table>
 	</div>
 	

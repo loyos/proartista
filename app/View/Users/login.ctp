@@ -4,7 +4,7 @@
 		echo $this->Session->flash('auth');
 		echo $this->Form->create('User');
 		echo '<table><tr><td>';
-		echo 'Nombre de Usuario:';
+		echo 'Email:';
 		echo '</td><td>';
 		echo $this->Form->input('username',array(
 			'label' => false
