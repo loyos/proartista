@@ -72,7 +72,6 @@
 				?>
 				</td>
 				<td class="Bold" width="200" valign="top" height="63" align="left" width="200">
-				<span class="Fuente_Texto">NOMBRE:</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php echo $item['Item']['alias']?>
 				<br>
@@ -92,7 +91,6 @@
 				}
 				?>
 				<br>
-				<span class="Fuente_Texto">CIUDAD:</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php echo $item['Item']['ciudad']?>
 				<br>
