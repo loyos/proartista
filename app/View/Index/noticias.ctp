@@ -70,7 +70,8 @@ $('.ver_mas').click(function(){
 	id = $(this).attr('id');
 	$.ajax({
 		type: "POST",
-		url: '<?php echo FULL_BASE_URL.'/'.basename(dirname(APP)).'/index/buscar_noticia.json' ?>',
+		url: '<?php echo FULL_BASE_URL.'/index/buscar_noticia.json' ?>',
+		//url: '<?php echo FULL_BASE_URL.'/'.basename(dirname(APP)).'/index/buscar_noticia.json' ?>',
 		data: { id: id},
 		dataType: "json"
 	}).done(function( msg ) {
