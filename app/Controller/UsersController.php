@@ -198,7 +198,6 @@ class UsersController extends AppController {
 			} else {
 				$data = $this->data;
 			}
-			var_dump($data);
 			if ($this->User->save($data)) {
 			$this->Session->setFlash('La actualización se realizó con éxito','success');
 			$this->redirect(array('controller'=>'users','action'=>'index'));
