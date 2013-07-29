@@ -1,4 +1,7 @@
 <div class="index box">
+
+<?php echo $this->Html->link('Página principal', '/');?>
+
 	<div class="title" style="margin-left: auto; margin-right: auto; width: 200px;">
 	<h2>Mi Perfil</h2>
 	</div>

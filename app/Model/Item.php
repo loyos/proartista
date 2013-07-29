@@ -4,21 +4,38 @@ class Item extends AppModel {
 	var $actsAs = array('Search.Searchable');
 
 	public $filterArgs = array(
-        'alias' => array('type' => 'like'),
+        // 'alias' => array('type' => 'like', 'field' => array('Item.alias', 'Item.genero', 'Item.email', 'Item.ciudad', 'Item.twitter', 'Item.especialidad', 'Item.descripcion', 'Item.actualmente')),
+		'alias' => array('type' => 'query', 'method' => 'orConditions'),
 		'ciudad' => array('type' => 'like'),
 		'subcategoria_id' => array('type' => 'value'),
 		'genero' => array('type' => 'like'),
 		'status' => array('type' => 'like'),
 		'especialidad' => array('type' => 'like'),
+		'twitter'=> array('type' => 'like'),
+		'descripcion'=> array('type' => 'like'),
+		'actualmente'=> array('type' => 'like'),
+		'email'=> array('type' => 'like'),
 		);
 
 	public function orConditions($data = array()) {
-        $filter = $data['filter'];
+        // debug($data);
+		$campos = explode(" ", $data['alias']);
+		
+		// debug($this->filterArgs);
+		
+		
+		foreach ($campos as $camps){
+			foreach ($this->filterArgs as $key => $fargs){
+				$condiciones[] = array(
+					$this->alias.'.'. $key . ' LIKE' => '%' . $camps . '%',
+				);
+			}
+		}
         $cond = array(
-            'OR' => array(
-                $this->alias . '.logo LIKE' => '%' . $filter . '%',
-                $this->alias . '.logo LIKE' => '%' . $filter . '%',
-            ));
+            'OR' =>	$condiciones				
+            );
+			// debug($cond);
+			// die();
         return $cond;
     }
 

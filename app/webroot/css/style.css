@@ -29,11 +29,18 @@ body {
 	height: 18px;
 }
 
+.search_home input {
+	height: 24px;
+	margin-left: 10px;
+}
+
 .campo{
 	border-radius: 20px;
 	background-color: #232222;
 	border: 1px solid #444242;
 	color: white;
+	width: 235px;
+	padding-left: 10px;
 }
 
 .boton_campo{
@@ -43,6 +50,7 @@ body {
 	border: 1px solid #444242;
 	color: white;
 	cursor:pointer;
+	width: 70px;
 }
 
 .lupa{
@@ -286,8 +294,7 @@ h2 {
 }
 
 .banner {
-	float: left;
-     
+	float: left;     
     width: auto;
 }
 
@@ -300,7 +307,7 @@ h2 {
 	height: 730px;
 	float: left;
 	margin-right: 15px;
-	margin-top: 27px;
+	margin-top: 5px;
 	border-top: 2px solid #F29100;
 	border-bottom: 2px solid #F29100;
 }
