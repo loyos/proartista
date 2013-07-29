@@ -38,6 +38,8 @@ class UsersController extends AppController {
 							'action' => 'admin_index'
 						));
 					}
+				} else {
+					$this->Session->setFlash(__('El nombre de usuario o contraseña son invalidos, vuelve a intentarlo'), 'success');
 				}
 			} else {
 				$this->Session->setFlash(__('El nombre de usuario o contraseña son invalidos, vuelve a intentarlo'), 'success');
