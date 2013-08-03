@@ -30,27 +30,23 @@ body {
 }
 
 .search_home input {
-	height: 24px;
+	height: 30px;
 	margin-left: 10px;
 }
 
 .campo{
 	border-radius: 20px;
-	background-color: #232222;
-	border: 1px solid #444242;
-	color: white;
+	background-color: #FFF;
+	border: 1px solid #000;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+	color: black;
 	width: 235px;
 	padding-left: 10px;
 }
 
 .boton_campo{
-	box-shadow: 3px 3px 1px #424242;
-	border-radius: 20px;
-	background-color: #232222;
-	border: 1px solid #444242;
-	color: white;
-	cursor:pointer;
-	width: 70px;
+	position: relative;
+	top: 10px;
 }
 
 .lupa{
@@ -209,6 +205,9 @@ h2 {
 .logo {
 	float:left;
 	margin-left: 90px;
+	height: 13px;
+	top: 10px;
+	position: relative;
 }
 
 .rif{
@@ -221,6 +220,7 @@ h2 {
 
 .menu {
 	float: right;
+	margin-top: 15px;
 }
 
 .menu li {
@@ -307,9 +307,21 @@ h2 {
 	height: 730px;
 	float: left;
 	margin-right: 15px;
-	margin-top: 5px;
+	margin-top: 54px;
 	border-top: 2px solid #F29100;
 	border-bottom: 2px solid #F29100;
+}
+
+.social{
+	position: relative;
+	float: left;
+	left: 30px;
+	top: 70px;
+}
+
+.social img{
+	margin-right: 5px;
+	border-radius: 10px;
 }
 
 .barra_publicidad{
@@ -484,6 +496,8 @@ img.image_txt {
 .sesion {
 	float: right;
 	height: 18px;
+	font-size: 20px;
+	margin-top: 10px;
 }
 
 .sesion_logout {

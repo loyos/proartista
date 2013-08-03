@@ -101,7 +101,7 @@
 		if (!empty($item['Item']['video'])) {
 			echo '<p>';
 			echo '<span class="title_span">Video:</span>';
-			echo '<span class="descripcion_span"><a href="'.$item['Item']['video'].'">'.$item['Item']['video'].'</a></span>';
+			echo '<span class="descripcion_span"><a href="'.$item['Item']['video'].'" target = "_blank">'.$item['Item']['video'].'</a></span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['biografia'])) {
