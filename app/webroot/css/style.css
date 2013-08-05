@@ -503,6 +503,8 @@ img.image_txt {
 .sesion_logout {
 	float: right;
 	height: 18px;
+	font-size: 20px;
+	margin-top: 10px;
 }
 
 .sesion_admin {

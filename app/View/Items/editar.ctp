@@ -278,10 +278,10 @@ function genero3_change(){
 	<?php
 		echo $this->Form->create('Item', array('type' => 'file','onSubmit' =>'return vaciar()'));
 		echo '<table>';
-		echo '<tr><td>Nombre</td><td>';
+		echo '<tr><td>Artista</td><td>';
 		echo $this->Form->input('alias', array(
 			'label' => false,
-			'value' => $datos_usuario['User']['nombre'],
+			'value' => '',
 			'after' => '*'
 		));
 		echo '</td>';
