@@ -477,6 +477,8 @@ img.image_txt {
 
 .title_descripcion {
 	font-size: 24px;
+	width: 300px;
+	padding: 5px;
 }
 
 .descripcion_span {
@@ -485,8 +487,33 @@ img.image_txt {
 	font-weight:normal;
 }
 
+.container_info {
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #C90;
+	margin-left: 0%;
+	font-size: 16px;
+	font-weight: bold;
+	width: 100%;
+	margin-top: 15px;
+	float: left;
+	display: block;
+}
+
 .content_descripcion {
 	margin-top:-9px;
+	float: left;
+	max-height: 200px;
+	width: 100%;
+}
+
+.content_descripcion p{
+	margin: 5px; 
+	margin-left: 0px;
+}
+
+.content_descripcion div {
+	margin-left: 50px;
+	text-align: left;
 }
 
 .descripcion_span p {
@@ -505,6 +532,7 @@ img.image_txt {
 	height: 18px;
 	font-size: 20px;
 	margin-top: 10px;
+	max-width: 205px;
 }
 
 .sesion_admin {
@@ -733,7 +761,9 @@ input[type="text"] .text {
 .musica_genero1{
 	display:none;
 }
-
+.direccion{
+	display: none;
+}
 .musica_genero2 {
 	display:none;
 }

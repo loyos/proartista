@@ -165,7 +165,7 @@ function genero2_change(){
 					if (a.Genero.nombre == genero_dos) {
 							$('#genero2').append($("<option selected=selected ></option>").attr("value", a.Genero.nombre).text(a.Genero.nombre)); 
 					} else {
-						$('#genero2').append($("<option></option>").attr("value", a.Genero.nombre).text(a.Genero.nombre)); 
+						$('#genero2').append($("<option></option>").attr("value", a.Genero.nombre).text(a.Genero.nombre));
 					}
 				});
 			});
@@ -261,6 +261,25 @@ function genero3_change(){
 			});
 		});
 	}
+}
+
+function direccion(){
+	// FULL_BASE_URL.'/'.basename(dirname(APP)).'/articulos/buscar_acabado.json'
+	var subcategoria = $('#subcategoria').val();
+	$.ajax({
+			type: "POST",
+			url: "/proartista/items/direccion.json",
+			data: { subcategoria: subcategoria},
+		dataType: "json"
+	}).done(function( msg ) {
+		if(msg == '1'){
+			$('.direccion').fadeIn(100);
+		}else{
+			$('.direccion').fadeOut(100);
+		}
+		// $('#subcategoria').append($("<option></option>").attr("value", '').text('Selecciona un Género'));
+	});
+
 }
 </script>
 <div class="index box">
@@ -387,6 +406,12 @@ function genero3_change(){
 			'id' => 'en_busca'
 		));
 		echo '</td></tr>';
+		echo '<tr class= "direccion"><td> Dirección: </td><td>';
+		echo $this->Form->input('direccion', array(
+			'label' => false,
+			'id' => 'direccion'
+		));
+		echo '</td></tr>';
 		echo '</table>';
 		if ($origen == 'edit') {
 			echo $this->Form->input('id',array(
@@ -479,6 +504,7 @@ function inArray(needle, haystack) {
 
 $('#subcategoria').change(function(){
 	genero();
+	direccion();
 });
 
 $('#genero1').change(function(){

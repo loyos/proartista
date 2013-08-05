@@ -56,69 +56,85 @@
 </div>
 </div>
 <div class="container_right">
-	<div class="title_descripcion">
-		<span class="title_span"><?php echo $item['Subcategoria']['alias'] ?>:</span>
+	<div class="title_descripcion" style = "text-align: center;">
+		<span class="title_span" style = "width: 500px;"><?php echo $item['Subcategoria']['alias'] ?>:</span> <br><br>
 		<span style="color:white"><?php echo $item['Item']['alias'] ?></span>
 	</div>
 	<br>
 	<br>
+	
+</div>
+<div class = "container_info">
 	<div class="content_descripcion">
 		<?php
+		 echo '<div style = "float: left">';
 		if (!empty($item['Item']['genero'])) {
 			echo '<p>';
 			echo '<span class="title_span">Genero:</span>';
+			echo '</p>';
+			echo '<p>';
 			echo '<span class="descripcion_span">'.$item['Item']['genero'].'</span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['especialidad'])) {
-			echo '<span class="title_span">Especialidad:</span>';
+			echo '<span class="title_span">Especialidad:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['especialidad'].'</span>';
 		}
 		if (!empty($item['Item']['ciudad'])) {
 			echo '<p>';
-			echo '<span class="title_span">Ciudad:</span>';
+			echo '<span class="title_span">Ciudad:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['ciudad'].'</span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['email'])) {
 			echo '<p>';
-			echo '<span class="title_span">Email:</span>';
+			echo '<span class="title_span">Email:</span>'; echo '<br>';
 			echo '<span class="descripcion_span"><a href="mailto:'.$item['Item']['email'].'">'.$item['Item']['email'].'</a></span>';
 			echo '</p>';
 		}
+		 echo '</div>';
+		 
+		 echo '<div style = "float: left">';
 		if (!empty($item['Item']['telefono'])) {
 			echo '<p>';
-			echo '<span class="title_span">Tlf:</span>';
+			echo '<span class="title_span">Tlf:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['telefono'].'</span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['twitter'])) {
 			echo '<p>';
-			echo '<span class="title_span">Twitter:</span>';
+			echo '<span class="title_span">Twitter:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['twitter'].'</span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['video'])) {
 			echo '<p>';
-			echo '<span class="title_span">Video:</span>';
+			echo '<span class="title_span">Video:</span>'; echo '<br>';
 			echo '<span class="descripcion_span"><a href="'.$item['Item']['video'].'" target = "_blank">'.$item['Item']['video'].'</a></span>';
 			echo '</p>';
 		}
 		if (!empty($item['Item']['biografia'])) {
-			echo '<span class="title_span">Bio:</span>';
+			echo '<span class="title_span">Biografía:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['biografia'].'</span>';
 			echo '<br><br>'; 
 		}
+		 echo '</div>';
+		 echo '<div style = "float: left">';
 		if (!empty($item['Item']['experiencia'])) {
 			
-			echo '<span class="title_span">Experiencia:</span>';
+			echo '<span class="title_span">Experiencia:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['experiencia'].'</span>';
 			echo '<br><br>'; 
 		}
 		if (!empty($item['Item']['descripcion'])) {
-			echo '<span class="title_span">Estan en busca:</span>';
+			echo '<span class="title_span">Estan en busca:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
-		}		
+		}
+		if (!empty($item['Item']['direccion'])) {
+			echo '<span class="title_span">Dirección:</span>'; echo '<br>';
+			echo '<span class="descripcion_span">'.$item['Item']['direccion'].'</span>';
+		}
+		echo '</div>';
 		?>
 	</div>
 </div>

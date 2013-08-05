@@ -154,6 +154,28 @@ class ItemsController extends AppController {
 		$this->RequestHandler->respondAs('json');
 		echo json_encode($genero);
 	}
+	
+	function direccion(){
+		$this->loadModel('Categoria');
+		$this->loadModel('Subcategoria');
+		$subcategoria = $this->Subcategoria->find('first', array(
+			'conditions' => array('Subcategoria.id' => $_POST['subcategoria']),
+		));
+		$categoria = $this->Categoria->find('first', array(
+			'conditions' => array('Categoria.id' => $subcategoria['Subcategoria']['categoria_id']),
+			'recursive' => -1
+		));
+		
+		if($categoria['Categoria']['alias'] ==  'ESTUDIOS ACADEMIAS'){
+			$existe = 1;
+		}else{
+			$existe = 0;
+		}
+		
+		$this->autoRender = false;
+		$this->RequestHandler->respondAs('json');
+		echo json_encode($existe);
+	}
 
 	function editar($item_id = null,$listo=false) {
 		if ($listo) {

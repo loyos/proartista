@@ -74,7 +74,8 @@ $cakeDescription = "ProArtista";
 				echo '</div>';
 			} else {
 				echo '<div class="sesion_logout">';
-				echo $this->Html->link($username.' ',array('controller' => 'users', 'action'=>'index'));
+				$name = explode(' ', $username);
+				echo $this->Html->link($name[0].' ',array('controller' => 'users', 'action'=>'index'));
 				echo '|';
 				echo $this->Html->link(' Cerrar Sesión ',array('controller' => 'users', 'action'=>'logout'));
 				echo '</div>';
