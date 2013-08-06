@@ -268,7 +268,7 @@ function direccion(){
 	var subcategoria = $('#subcategoria').val();
 	$.ajax({
 			type: "POST",
-			url: "/proartista/items/direccion.json",
+			url: "/items/direccion.json",
 			data: { subcategoria: subcategoria},
 		dataType: "json"
 	}).done(function( msg ) {
