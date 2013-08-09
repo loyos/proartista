@@ -186,8 +186,10 @@ $cakeDescription = "ProArtista";
 </html>
 <script>
 $(document).ready(function() {
-	$('.div_flash').delay(4500).fadeOut(1500);
-	
+	$('.success_flash').delay(4500).fadeOut(1500);
+	$('.permanent').click(function(){
+		$('.permanent').fadeOut(1500);
+	});
  });
 	
 </script>

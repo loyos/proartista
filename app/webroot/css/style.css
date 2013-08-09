@@ -342,6 +342,7 @@ h2 {
 }
 
 #footer {
+	position: absolute;
 	bottom: 0px;
 	left: 0px;
 	background-color: #121212;
@@ -514,6 +515,7 @@ img.image_txt {
 .content_descripcion div {
 	margin-left: 50px;
 	text-align: left;
+	max-width: 200px;
 }
 
 .descripcion_span p {
@@ -648,6 +650,22 @@ td.td_img{
 	background-color:#c90;
 	border-radius: 10px;
 	box-shadow: 4px 4px 1px #9E6200;
+}
+
+.permanent {
+	background-color:#c90;
+	border-radius: 10px;
+	box-shadow: 4px 4px 1px #9E6200;
+}
+
+.cerrar_flash{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	color: white;
+	font-size: 10px;
+	float: right;
+	cursor: pointer;
 }
 
 .message {

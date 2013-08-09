@@ -35,6 +35,7 @@
 		});
 	</script>
 <div class="index box">
+<?php echo $this->element('regresar_home'). '<br>'; ?>
 <div class = "marco_slider">
 <div class="container_slider">
 	<div id="slides">

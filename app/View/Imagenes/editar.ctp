@@ -173,10 +173,11 @@
 		echo $this->Html->image('loading.gif', array('width'=>'100px', 'id' => 'loading'));
 	echo "</div>";
 	
-	echo $this->Form->submit('Cargar Fotos', array('class' => 'button'));
-	echo '<div class="submit link_listo">';
-	echo $this->Html->link('Finalizar Publicación',array('controller'=>'items','action'=>'editar',$item_id,true), array('class'=>'button','style'=>"margin-top:10px"));	
-	echo '</div>';
+	echo $this->Form->submit('Finalizar Publicación', array('class' => 'button'));
+	// echo $this->Form->submit('Cargar Fotos', array('class' => 'button'));
+	// echo '<div class="submit link_listo">';
+	// echo $this->Html->link('Finalizar Publicación',array('controller'=>'items','action'=>'editar',$item_id,true), array('class'=>'button','style'=>"margin-top:10px"));	
+	// echo '</div>';
 	echo $this->Form->end;
 	?>
 </div>

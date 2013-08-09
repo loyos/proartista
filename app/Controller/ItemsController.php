@@ -200,7 +200,7 @@ class ItemsController extends AppController {
 			// $Email->viewVars(compact('username','alias'));
 			// $Email->send();
 			
-			$this->Session->setFlash("Pronto recibirás un email con la aprobación de tu publicación.", 'success');
+			$this->Session->setFlash("Publicación Finalizada", 'permanent');
 			$this->redirect(array('controller'=>'users','index'=>'index'));
 		}
 		if (!empty($this->data)) {

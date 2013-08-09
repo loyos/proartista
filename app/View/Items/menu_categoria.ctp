@@ -1,5 +1,6 @@
 <div class= "box categoria_menu">
 	<?php
+		echo $this->element('regresar_home').'<br>';
 		foreach($categorias_menu as $categoria){
 			// debug($categoria);
 			$cat_id = $categoria['Categoria']['id'];

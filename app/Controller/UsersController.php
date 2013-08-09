@@ -69,7 +69,7 @@ class UsersController extends AppController {
 						$Email->template('registro');
 						$Email->viewVars(compact('username','apellido','nombre','clave'));
 						$Email->send();
-						$this->Session->setFlash(__('En breve recibirás un correo para validar tu cuenta'), 'success');
+						$this->Session->setFlash(__('En breve recibirás un correo para validar tu cuenta'), 'permanent');
 						$this->redirect(array('controller'=>'index', 'action'=>'index'));
 				}else {
 					$this->Session->setFlash(__('Corrija los errores y vuelva a intentarlo'), 'success');

@@ -20,15 +20,16 @@ class Item extends AppModel {
 	public function orConditions($data = array()) {
         // debug($data);
 		$campos = explode(" ", $data['alias']);
-		
 		// debug($this->filterArgs);
 		
 		
 		foreach ($campos as $camps){
 			foreach ($this->filterArgs as $key => $fargs){
-				$condiciones[] = array(
-					$this->alias.'.'. $key . ' LIKE' => '%' . $camps . '%',
-				);
+				if($camps != ''){
+					$condiciones[] = array(
+						$this->alias.'.'. $key . ' LIKE' => '%' . $camps . '%',
+					);
+				}
 			}
 		}
         $cond = array(

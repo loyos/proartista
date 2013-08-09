@@ -1,6 +1,7 @@
 <div class="index box">
 		
 		<?php
+			echo $this->element('regresar_home');
 			if(!empty($items)){
 				echo $this->element('search', array(
 					'genero' => $generos

@@ -1,4 +1,5 @@
 <div class="index box">
+<?php echo $this->element('regresar_home'); ?>
 	<?php if (empty($id)) { ?>
 	<div class="noticia" style="display:none">
 	<?php
