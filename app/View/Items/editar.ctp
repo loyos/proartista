@@ -400,10 +400,12 @@ function direccion(){
 			'label' => false,
 			'id' =>'bio'
 		));
-		echo '</td><td>En busca de</td><td>';
+		echo '</td><td>Descripcion breve</td><td>';
 		echo $this->Form->input('descripcion', array(
 			'label' => false,
-			'id' => 'en_busca'
+			'id' => 'en_busca',
+			'after' => '*',
+			'cols' => '23'
 		));
 		echo '</td></tr>';
 		echo '<tr class= "direccion"><td> Dirección: </td><td>';
@@ -463,18 +465,18 @@ $(document).ready(function() {
 	});
 	
 	if($('#en_busca').val() == ''){
-		$('#en_busca').val('(Rellene este cuadro solo si se encuentra en búsqueda de un integrante o artista, así como otro tipo de personal especializado para cumplir sus intereses)');
+		$('#en_busca').val('(Define brevemente tu arte y lo que ofreces)');
 	}
 	$('#en_busca').on('focus', function(){
 		var $this = $(this);
-		if($this.val() == '(Rellene este cuadro solo si se encuentra en búsqueda de un integrante o artista, así como otro tipo de personal especializado para cumplir sus intereses)'){
+		if($this.val() == '(Define brevemente tu arte y lo que ofreces)'){
 			$this.val('');
 		}
 	});
 	$('#en_busca').on('blur', function(){
 		var $this = $(this);
 		if($this.val() == ''){
-			$this.val('(Rellene este cuadro solo si se encuentra en búsqueda de un integrante o artista, así como otro tipo de personal especializado para cumplir sus intereses)');
+			$this.val('(Define brevemente tu arte y lo que ofreces)');
 		}
 	});
 

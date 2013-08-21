@@ -94,6 +94,12 @@ class Item extends AppModel {
                 'message' => 'El género es obligatorio'
             )
         ),
+		'descripcion' => array(
+            'required' => array(
+                'rule' => array('notEmpty_descripcion'),
+                'message' => 'Este campo es obligatorio'
+            )
+        ),
         // 'telefono' => array(
             // 'valid' => array(
                 // 'rule' => array('notEmpty'),
@@ -131,6 +137,14 @@ class Item extends AppModel {
 			if(empty($value['genero_uno'])) {
 				return false;
 			}
+		}
+
+		return true;
+	}
+	
+	function notEmpty_descripcion($value) {
+		if ($value['descripcion'] == '(Define brevemente tu arte y lo que ofreces)' || empty($value['descripcion'])) {
+			return false;
 		}
 
 		return true;
