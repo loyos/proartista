@@ -98,7 +98,17 @@ class Item extends AppModel {
             'required' => array(
                 'rule' => array('notEmpty_descripcion'),
                 'message' => 'Este campo es obligatorio'
-            )
+            ),
+			'caracteres' => array(
+                'rule' => array('caracteres_descripcion'),
+                'message' => 'Máximo 60 caracteres'
+            ),
+        ),
+		'biografia' => array(
+			'caracteres_bio' => array(
+                'rule' => array('caracteres_biografia'),
+                'message' => 'Máximo 400 caracteres'
+            ),
         ),
         // 'telefono' => array(
             // 'valid' => array(
@@ -144,6 +154,22 @@ class Item extends AppModel {
 	
 	function notEmpty_descripcion($value) {
 		if ($value['descripcion'] == '(Define brevemente tu arte y lo que ofreces)' || empty($value['descripcion'])) {
+			return false;
+		}
+
+		return true;
+	}
+	
+	function caracteres_descripcion($value) {
+		if (!empty($value['descripcion'])&& strlen($value['descripcion']) > 60) {
+			return false;
+		}
+
+		return true;
+	}
+	
+	function caracteres_biografia($value) {
+		if (!empty($value['biografia'])&& strlen($value['biografia']) > 400) {
 			return false;
 		}
 
