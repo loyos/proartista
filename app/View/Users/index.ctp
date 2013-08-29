@@ -39,10 +39,11 @@
 		<?php
 		if (!empty($items)) {
 			foreach ($items as $i) {
+			// debug($i);
 			?><div class="content_items content_items_publicaciones">
 			<table class="publicaciones" border="1">
 				<tr>
-				<td >
+				<td>
 				<?php 
 				if(empty($i['Item']['logo'])){
 						echo $this->Html->link($this->Html->image('no_image.jpg', array('width'=>'80px','height'=>'80px')),array(
@@ -60,24 +61,27 @@
 					));
 				}
 				?>
+				<td style= "padding-top: 30px;"> <span class = "Fuente_Texto"> <?php echo $i['Subcategoria']['alias'];  ?></span></td>
 				</td>
 				<td class="Bold" valign="top" align="left">
-				<span class="Fuente_Texto">NOMBRE:</span>
+				<span class="Fuente_Texto">NOMBRE:<br></span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php echo $i['Item']['alias']?>
 				<br>
 				<span class="Fuente_Texto">
 				<?php
 				if ($i['Subcategoria']['id'] == 1) {
-					echo 'BANDA. GÉNERO:';
+					echo 'GÉNERO:<br>';
 				} else {
-					echo $i['Subcategoria']['alias'];
+					echo 'ESPECIALIDAD: <br>';
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php 
 				if ($i['Subcategoria']['id'] == 1) {
 					echo $i['Item']['genero'];
+				}else{
+					echo $i['Item']['especialidad'];
 				}?>
 				<br>
 				<span class="Fuente_Texto">CIUDAD:</span>

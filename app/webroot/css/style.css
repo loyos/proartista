@@ -221,6 +221,7 @@ h2 {
 .menu {
 	float: right;
 	margin-top: 15px;
+	clear: right;
 }
 
 .menu li {
@@ -315,8 +316,9 @@ h2 {
 .social{
 	position: relative;
 	float: left;
-	left: 30px;
-	top: 70px;
+	left: 409px;
+	top: 65px;
+	clear: left;
 }
 
 .social img{
@@ -371,6 +373,7 @@ h2 {
 	margin-right: auto;
 	width: 990px;
 	text-align: center;
+	margin-top: 15px;
 }
 
 .actual {
@@ -770,6 +773,10 @@ input[type="file"] {
 	color: white;
 	width: 100px;
 	opacity: 0;
+}
+
+.textarea{
+	width: 200px;
 }
 
 input[type="text"] .text {

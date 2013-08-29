@@ -99,7 +99,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'proartis_proartista',
+		'database' => 'proartista',
 		'prefix' => '',
 		'encoding' => 'utf8'
 	);

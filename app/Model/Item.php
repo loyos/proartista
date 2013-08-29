@@ -18,26 +18,29 @@ class Item extends AppModel {
 		);
 
 	public function orConditions($data = array()) {
-        // debug($data);
-		$campos = explode(" ", $data['alias']);
-		// debug($this->filterArgs);
-		
-		
-		foreach ($campos as $camps){
-			foreach ($this->filterArgs as $key => $fargs){
-				if($camps != ''){
-					$condiciones[] = array(
-						$this->alias.'.'. $key . ' LIKE' => '%' . $camps . '%',
-					);
+        
+		if($data['alias'] != 'Buscar'){
+			$campos = explode(" ", $data['alias']);
+			// debug($this->filterArgs);
+			
+			foreach ($campos as $camps){
+				foreach ($this->filterArgs as $key => $fargs){
+					if($camps != ''){
+						$condiciones[] = array(
+							$this->alias.'.'. $key . ' LIKE' => '%' . $camps . '%',
+						);
+					}
 				}
 			}
+			$cond = array(
+				'OR' =>	$condiciones				
+				);
+				// debug($cond);
+				// die();
+		}else{
+			$cond = 1;
 		}
-        $cond = array(
-            'OR' =>	$condiciones				
-            );
-			// debug($cond);
-			// die();
-        return $cond;
+		return $cond;
     }
 
 	public $hasAndBelongsToMany = array('Genero' => array(
@@ -169,7 +172,7 @@ class Item extends AppModel {
 	}
 	
 	function caracteres_biografia($value) {
-		if (!empty($value['biografia'])&& strlen($value['biografia']) > 400) {
+		if (!empty($value['biografia'])&& strlen($value['biografia']) > 210) {
 			return false;
 		}
 

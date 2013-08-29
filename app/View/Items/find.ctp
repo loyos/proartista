@@ -73,23 +73,26 @@
 					));
 				}
 				?>
+				<td style= "padding-top: 0px;"> <span class = "Fuente_Texto"> <?php echo $item['Subcategoria']['alias'];  ?></span></td>
 				</td>
 				<td class="Bold" width="200" valign="top" height="63" align="left">
-				<span class="Fuente_Texto">NOMBRE:</span>
+				<span class="Fuente_Texto">NOMBRE:<br></span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php echo $item['Item']['alias']?>
 				<br>
 				<span class="Fuente_Texto">
 				<?php
 				if ($item['Subcategoria']['id'] == 1) {
-					echo 'BANDA. GÉNERO:';
+					echo 'BANDA:<br>';
 				} else {
-					echo $item['Subcategoria']['alias'];
+					echo 'ESPECIALIDAD<br>';
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php 
 				if ($item['Subcategoria']['id'] == 1) {
+					echo $item['Item']['genero'];
+				}else {
 					echo $item['Item']['genero'];
 				}?>
 				<br>
@@ -99,11 +102,8 @@
 				<br>
 				</td>
 				<td class="Bold" width="auto" valign="top" height="63" align="left">
-					<span class="Fuente_Texto">Interés en:</span>
+					<span class="Fuente_Texto">Descripción breve:<br></span>
 					<?php echo $item['Item']['descripcion']?>
-					<br>
-					<span class="Fuente_Texto">Especialidad:</span>
-					<?php echo $item['Item']['especialidad']?>
 				</td>
 				</tr>
 				</table>

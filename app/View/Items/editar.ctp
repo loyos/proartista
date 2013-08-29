@@ -296,7 +296,7 @@ function direccion(){
 <div class= "form_item">
 	<?php
 		echo $this->Form->create('Item', array('type' => 'file','onSubmit' =>'return vaciar()'));
-		echo '<table>';
+		echo '<table width= 100%>';
 		echo '<tr><td>Artista</td><td>';
 		echo $this->Form->input('alias', array(
 			'label' => false,
@@ -304,17 +304,31 @@ function direccion(){
 			'after' => '*'
 		));
 		echo '</td>';
-		echo '<td>Categoría</td><td>';
-		echo $this->Form->input('subcategoria_id', array(
+		echo '<td>Email</td><td>';
+		echo $this->Form->input('email', array(
 			'label' => false,
-			'id' => 'subcategoria',
+			'value' => $datos_usuario['User']['email'],
 			'after' => '*'
 		));
-		echo '</td></tr>';
+		echo '</td>';
+		// echo '<td>Categoría</td>';
+		// echo '<td>';
+		// echo $this->Form->input('subcategoria_id', array(
+			// 'label' => false,
+			// 'id' => 'subcategoria',
+			// 'after' => '*'
+		// ));
+		// echo '</td>';
+		echo '</tr>';
 		echo '<tr><td>Ciudad</td><td>';
 		echo $this->Form->input('ciudad', array(
 			'label' => false,
 			'after' => '*'
+		));
+		echo '</td>';
+		echo '<td>Twitter</td><td>';
+		echo $this->Form->input('twitter', array(
+			'label' => false
 		));
 		echo '</td>';
 		/*echo '<td>Email</td><td>';
@@ -324,47 +338,24 @@ function direccion(){
 			'after' => '*'
 		));
 		echo '</td>';*/
-		echo '<td>Especialidad</td><td>';
-	    echo $this->Form->input('especialidad', array(
-			'label' => false,
-			'id' =>'especialidad'
-		));
-		echo '</td>';
 		echo '</tr>';
-		echo '<tr><td>Teléfono</td><td>';
-		echo $this->Form->input('telefono', array(
+		echo '<tr>';
+		echo '<td>Categoría</td>';
+		echo '<td>';
+		echo $this->Form->input('subcategoria_id', array(
 			'label' => false,
-			'value' => $datos_usuario['User']['telefono']
-		));
-		echo '</td>';
-		/*echo '<td>Facebook</td><td>';
-		echo $this->Form->input('facebook', array(
-			'label' => false,
-		));
-		echo '</td>*/
-		echo '<td>Email</td><td>';
-		echo $this->Form->input('email', array(
-			'label' => false,
-			'value' => $datos_usuario['User']['email'],
+			'id' => 'subcategoria',
 			'after' => '*'
 		));
 		echo '</td>';
+		echo '<td>Facebook</td><td>';
+		echo $this->Form->input('facebook', array(
+			'label' => false,
+		));
+		echo '</td>';
 		echo '</tr>';
-		echo '<tr><td>Twitter</td><td>';
-		echo $this->Form->input('twitter', array(
-			'label' => false
-		));
-		echo '</td>';
-		echo '<td>Página web</td><td>';
-		echo $this->Form->input('web', array(
-			'label' => false
-		));
-		echo '</td></tr>';
-		echo '<tr><td>Video</td><td>';
-		echo $this->Form->input('video', array(
-			'label' => false
-		));
-		echo '</td>';
+		
+		echo '<tr>';
 		echo '<td class="musica_genero1">1º Genero</td><td class="musica_genero1">';
 		echo $this->Form->input('genero_uno', array(
 			'id' => 'genero1',
@@ -373,47 +364,71 @@ function direccion(){
 			'after' => '*'
 		));
 		echo '</td>';
-		echo '<tr>';
-		echo '<td>Facebook</td><td>';
-		echo $this->Form->input('facebook', array(
-			'label' => false,
+		
+		echo '<td>Página web</td><td>';
+		echo $this->Form->input('web', array(
+			'label' => false
 		));
 		echo '</td>';
+		echo '</tr>';
 		
-		echo '<td class="musica_genero2">2º Genero</td><td class="musica_genero2">';
-		echo $this->Form->input('genero_dos', array(
+		echo '<tr>';
+			echo '<td class="musica_genero2">2º Genero</td><td class="musica_genero2">';
+			echo $this->Form->input('genero_dos', array(
 			'id' => 'genero2',
 			'label' => false,
 			'type' => 'select'
-		));
-		echo '</td></tr>';
-		echo '<tr><td></td><td></td><td class="musica_genero3">3º Genero</td><td class="musica_genero3">';
-		echo $this->Form->input('genero_tres', array(
+			));
+			
+			echo '<td>Video</td><td>';
+			echo $this->Form->input('video', array(
+				'label' => false
+			));
+			echo '</td>';	
+		echo '</tr>';
+		
+		echo '<tr>';
+			echo '<tr><td class="musica_genero3">3º Genero</td><td class="musica_genero3">';
+			echo $this->Form->input('genero_tres', array(
 			'id' => 'genero3',
 			'label' => false,
 			'type' => 'select'
-		));
-		echo '</td></tr>';
-		echo '<tr>';
-		echo '<td>Biografía</td><td>';
-		echo $this->Form->input('biografia', array(
+			));
+			echo '</td>';
+			
+			echo '<td>Biografía</td><td>';
+			echo $this->Form->input('biografia', array(
 			'label' => false,
-			'id' =>'bio'
+			'id' =>'bio',
+			'class' => 'textarea'
 		));
-		echo '</td><td>Descripcion breve</td><td>';
+		echo '</td>';
+		echo '</tr>';
+		
+		echo '<tr>';
+			echo '<td>Especialidad</td><td>';
+			echo $this->Form->input('especialidad', array(
+			'label' => false,
+			'id' =>'especialidad'
+		));
+		echo '</td>';
+		echo '<td>Descripcion breve</td><td>';
 		echo $this->Form->input('descripcion', array(
 			'label' => false,
 			'id' => 'en_busca',
 			'after' => '*',
-			'cols' => '23'
+			'cols' => '20',
 		));
-		echo '</td></tr>';
+		echo '</td>';
+		echo '</tr>';
+		
 		echo '<tr class= "direccion"><td> Dirección: </td><td>';
 		echo $this->Form->input('direccion', array(
 			'label' => false,
 			'id' => 'direccion'
 		));
-		echo '</td></tr>';
+		echo '</td>';
+		echo '</tr>';
 		echo '</table>';
 		if ($origen == 'edit') {
 			echo $this->Form->input('id',array(
