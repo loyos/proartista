@@ -61,12 +61,12 @@
 					));
 				}
 				?>
-				<td style= "padding-top: 30px;"> <span class = "Fuente_Texto"> <?php echo $i['Subcategoria']['alias'];  ?></span></td>
+				<td style= "padding-top: 30px; font-size: 18px;"> <span class = "Fuente_Texto"> <?php echo $i['Subcategoria']['alias'];  ?></span></td>
 				</td>
 				<td class="Bold" valign="top" align="left">
 				<span class="Fuente_Texto">NOMBRE:<br></span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
-				<?php echo $i['Item']['alias']?>
+				<?php echo strtoupper($i['Item']['alias']);?>
 				<br>
 				<span class="Fuente_Texto">
 				<?php
