@@ -61,19 +61,20 @@
 					));
 				}
 				?>
-				<td style= "padding-top: 30px; font-size: 18px;"> <span class = "Fuente_Texto"> <?php echo $i['Subcategoria']['alias'];  ?></span></td>
+				<td style= "padding-top: 30px; font-size: 18px; width: 120px;"> <span class = "Fuente_Texto"> <?php echo $i['Subcategoria']['alias'];  ?></span></td>
 				</td>
 				<td class="Bold" valign="top" align="left">
-				<span class="Fuente_Texto">NOMBRE:<br></span>
-				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
-				<?php echo strtoupper($i['Item']['alias']);?>
+				
+				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 16px;">
+				<?php echo strtoupper($i['Item']['alias']). '<br>';?>
+				</span>
 				<br>
 				<span class="Fuente_Texto">
 				<?php
 				if ($i['Subcategoria']['id'] == 1) {
-					echo 'GÉNERO:<br>';
+					echo 'Género:<br>';
 				} else {
-					echo 'ESPECIALIDAD: <br>';
+					echo 'Especialidad: <br>';
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
@@ -83,8 +84,9 @@
 				}else{
 					echo $i['Item']['especialidad'];
 				}?>
+				</span>
 				<br>
-				<span class="Fuente_Texto">CIUDAD:</span>
+				<span class="Fuente_Texto">Ciudad:</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php echo $i['Item']['ciudad']?>
 				</td>

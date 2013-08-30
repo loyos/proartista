@@ -19,7 +19,7 @@
 				echo '<div class= "aviso"> Lo sentimos! no hay publicaciones en esta categoría. </div>';
 			}
 		?>
-		<table style= "width: 100%;">
+		<table class = "main_table">
 		<?php 
 		//debug($items);
 		foreach ($items as $item) {
@@ -51,10 +51,10 @@
 				
 				<tr>
 				<td>
-				<table style= "width: 688px; border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 40px;
+				<table style= " border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 40px;
 				padding-right: 40px;">
-				<tr style= "padding: 10px;">
-				<td width="61" valign="top" height="63">
+				<tr style= "padding: 10px; width: 80px;">
+				<td valign="top" style = 'width: 120px;'>
 				<?php
 				if(empty($item['Item']['logo'])){
 						echo $this->Html->link($this->Html->image('no_image.jpg', array('width'=>'80px','height'=>'80px')),array(
@@ -72,19 +72,21 @@
 					));
 				}
 				?>
-				<td style= "padding-top: 0px; font-size: 18px;"> <span class = "Fuente_Texto"> <?php echo $item['Subcategoria']['alias'];  ?></span></td>
+					<td style= "padding-top: 0px; font-size: 18px; width: 100px;">
+						<span class = "Fuente_Texto" style = ' text-align: center;'> <?php echo $item['Subcategoria']['alias'];  ?></span>
+					</td>
 				</td>
-				<td class="Bold" width="200" valign="top" height="63" align="left" width="200">
-				<span class="Fuente_Texto">NOMBRE: <br></span>
-				<?php echo strtoupper($item['Item']['alias']);?>
+				<td class="Bold" valign="top" align="left">
+				<!-- <span class="Fuente_Texto">NOMBRE: <br></span> -->
+				<span> <?php echo strtoupper($item['Item']['alias']).'<br>';?> </span>
 				<br>
 				<span class="Fuente_Texto">
 				<?php
 					// debug($item);
 				if ($item['Subcategoria']['id'] == 1) {
-					echo 'GÉNERO:<br>';
+					echo 'Género:<br>';
 				} else {
-					echo 'ESPECIALIDAD:<br>';
+					echo 'Especialidad:<br>';
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
@@ -95,13 +97,14 @@
 					echo $i['Item']['especialidad'];
 				}
 				?>
+				</span>
 				<br>
-				<span class="Fuente_Texto"> CIUDAD: </span>
+				<span class="Fuente_Texto"> Ciudad: </span>
 				<?php echo $item['Item']['ciudad']?>
 				<br>
 				</td>
-				<td class="Bold" width="auto" valign="top" height="63" align="left">
-					<span class="Fuente_Texto">Descripcion Breve:<br></span>
+				<td class="Bold" valign="top" height="63" align="left">
+					<span class="Fuente_Texto">Descripción Breve:<br></span>
 					<?php echo $item['Item']['descripcion']?>
 				</td>
 				</tr>

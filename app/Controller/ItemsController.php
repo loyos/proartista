@@ -98,7 +98,7 @@ class ItemsController extends AppController {
 		// debug($categorias_menu);
 	}
 
-	function descripcion ($item_id){
+	function descripcion($item_id){
 		$item = $this->Item->find('first',array(
 			'conditions' => array('Item.id'=>$item_id),
 			'contain' => array('Imagen')

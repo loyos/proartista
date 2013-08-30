@@ -204,7 +204,7 @@ h2 {
 
 .logo {
 	float:left;
-	margin-left: 90px;
+	margin-left: 60px;
 	height: 13px;
 	top: 10px;
 	position: relative;
@@ -433,21 +433,25 @@ img.image_txt {
 	font-size: 8px;
 }
 
+.main_table{
+	margin-top: 90px;
+}
+
 .content_items {
-	width: 100%;
 	margin-top: 1%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .content_items table{
-	width: 100%;
+	width: auto;
 	height: auto;
+	table-layout:fixed;
 }
 
-.content_items td{
-	width: auto;
-	max-width: 30px;
+.content_items table table td{
+	width: 170px;
+	word-wrap:break-word;
 }
 
 .profile table{
@@ -540,6 +544,10 @@ img.image_txt {
 	max-width: 205px;
 }
 
+.sesion_logout .nombre{
+	font-size: 25px;
+}
+
 .sesion_admin {
 	float: right;
 }
@@ -618,6 +626,7 @@ table.publicaciones td {
 	width: 672px;
 	margin-left: auto;
 	margin-right: auto;
+	font-size: 18px;
 }
 
 .link_listo {

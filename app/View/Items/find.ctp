@@ -15,7 +15,7 @@
 			echo '<div class= "aviso" style = "text-align: center"> Lo sentimos! no hay publicaciones o categorías que coincidan con esta búsqueda. </div>';
 		}
 		?>
-		<table style= "width: 100%;">
+		<table>
 		<?php 
 		// debug($items);
 		foreach ($items as $item) {
@@ -55,7 +55,7 @@
 				<table style= "width: 688px; border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 30px;
 				padding-right: 30px;">
 				<tr style= "padding: 10px;">
-				<td width="61" valign="top" height="63">
+				<td valign="top" style = 'width: 100px;'>
 				<?php
 				if(empty($item['Item']['logo'])){
 						echo $this->Html->link($this->Html->image('no_image.jpg', array('width'=>'80px','height'=>'80px')),array(
@@ -73,19 +73,19 @@
 					));
 				}
 				?>
-				<td style= "padding-top: 0px; font-size: 18px;"> <span class = "Fuente_Texto"> <?php echo $item['Subcategoria']['alias'];  ?></span></td>
+				<td style= "padding-top: 0px; font-size: 18px; width: 100px;"> <span class = "Fuente_Texto"> <?php echo $item['Subcategoria']['alias'];  ?></span></td>
 				</td>
-				<td class="Bold" width="200" valign="top" height="63" align="left">
-				<span class="Fuente_Texto">NOMBRE:<br></span>
-				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
-				<?php echo strtoupper($item['Item']['alias']);?>
+				<td class="Bold" valign="top" height="63" align="left">
+				
+				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 16px;">
+				<?php echo strtoupper($item['Item']['alias']). '<br>';?> </span>
 				<br>
 				<span class="Fuente_Texto">
 				<?php
 				if ($item['Subcategoria']['id'] == 1) {
-					echo 'BANDA:<br>';
+					echo 'Género:<br>';
 				} else {
-					echo 'ESPECIALIDAD<br>';
+					echo 'Especialidad: <br>';
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
@@ -96,9 +96,9 @@
 					echo $item['Item']['genero'];
 				}?>
 				<br>
-				<span class="Fuente_Texto">CIUDAD:</span>
+				<span class="Fuente_Texto" style = 'font-size: 16px;'>Ciudad:</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
-				<?php echo $item['Item']['ciudad']?>
+				<?php echo $item['Item']['ciudad']?></span>
 				<br>
 				</td>
 				<td class="Bold" width="auto" valign="top" height="63" align="left">
