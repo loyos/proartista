@@ -356,7 +356,7 @@ function direccion(){
 		echo '</tr>';
 		
 		echo '<tr>';
-		echo '<td class="musica_genero1">1º Genero</td><td class="musica_genero1">';
+		echo '<td class="musica_genero1" style="vertical-align:top">1º Genero</td><td class="musica_genero1" style="vertical-align:top">';
 		echo $this->Form->input('genero_uno', array(
 			'id' => 'genero1',
 			'label' => false,
@@ -373,7 +373,7 @@ function direccion(){
 		echo '</tr>';
 		
 		echo '<tr>';
-			echo '<td class="musica_genero2">2º Genero</td><td class="musica_genero2">';
+			echo '<td class="musica_genero2" style="vertical-align:top">2º Genero</td><td class="musica_genero2" style="vertical-align:top">';
 			echo $this->Form->input('genero_dos', array(
 			'id' => 'genero2',
 			'label' => false,
@@ -388,7 +388,7 @@ function direccion(){
 		echo '</tr>';
 		
 		echo '<tr>';
-			echo '<tr><td class="musica_genero3">3º Genero</td><td class="musica_genero3">';
+			echo '<tr><td class="musica_genero3" style="vertical-align:top">3º Genero</td><td class="musica_genero3" style="vertical-align:top">';
 			echo $this->Form->input('genero_tres', array(
 			'id' => 'genero3',
 			'label' => false,
@@ -396,7 +396,7 @@ function direccion(){
 			));
 			echo '</td>';
 			
-			echo '<td>Biografía</td><td>';
+			echo '<td style="vertical-align:top" >Biografía</td><td>';
 			echo $this->Form->input('biografia', array(
 			'label' => false,
 			'id' =>'bio',
@@ -406,13 +406,13 @@ function direccion(){
 		echo '</tr>';
 		
 		echo '<tr>';
-			echo '<td>Especialidad</td><td>';
+			echo '<td style="vertical-align:top">Especialidad</td><td style="vertical-align:top">';
 			echo $this->Form->input('especialidad', array(
 			'label' => false,
 			'id' =>'especialidad'
 		));
 		echo '</td>';
-		echo '<td>Descripcion breve</td><td>';
+		echo '<td style="vertical-align:top">Descripcion breve</td><td style="vertical-align:top">';
 		echo $this->Form->input('descripcion', array(
 			'label' => false,
 			'id' => 'en_busca',
@@ -422,7 +422,7 @@ function direccion(){
 		echo '</td>';
 		echo '</tr>';
 		
-		echo '<tr class= "direccion"><td> Dirección: </td><td>';
+		echo '<tr class= "direccion" style="vertical-align:top"><td> Dirección: </td><td style="vertical-align:top">';
 		echo $this->Form->input('direccion', array(
 			'label' => false,
 			'id' => 'direccion'
