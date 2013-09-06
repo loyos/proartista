@@ -29,6 +29,7 @@
 	Router::connect('/publicaciones/*', array('controller' => 'items', 'action' => 'index'));
 	Router::connect('/perfil/*', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/buscar/*', array('controller' => 'items', 'action' => 'find', '999'));
+	Router::connect('/contactos/*', array('controller' => 'contactos', 'action' => 'index'));
 	Router::connect('/musica_menu/*', array('controller' => 'items', 'action' => 'menu_categoria', '1'));
 	Router::connect('/escena_menu/*', array('controller' => 'items', 'action' => 'menu_categoria', '2'));
 	Router::connect('/servicios_menu/*', array('controller' => 'items', 'action' => 'menu_categoria', '3'));
