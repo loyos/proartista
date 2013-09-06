@@ -40,7 +40,12 @@
 <div class="container_slider">
 	<div id="slides">
 		<div class="slides_container">
-			<?php
+				<div class="slide">
+						<div class = "prueba">
+							<?php echo $this->Html->image('logos/'.$item['Item']['logo'], array('height'=>'250px', 'max-width' => '100%')); ?>
+						</div>
+				</div>
+				<?php
 				foreach ($item['Imagen'] as $imagen) { ?>
 					<div class="slide">
 						<div class = "prueba">
