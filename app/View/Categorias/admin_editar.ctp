@@ -16,3 +16,4 @@ echo $this->Form->submit('Hecho', array('class' => 'button'));
 echo $this->Form->end;
 ?>
 </div>
+</div>

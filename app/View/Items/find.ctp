@@ -73,7 +73,7 @@
 					));
 				}
 				?>
-				<td style= "padding-top: 0px; font-size: 18px; width: 100px;"> <span class = "Fuente_Texto"> <?php echo $item['Subcategoria']['alias'];  ?></span></td>
+				<td style= "padding-top: 0px; font-size: 18px; width: 100px;"> <span class = "Fuente_Texto" style="padding-right:10px;"> <?php echo $item['Subcategoria']['alias'];  ?></span></td>
 				</td>
 				<td class="Bold" valign="top" height="63" align="left">
 				
