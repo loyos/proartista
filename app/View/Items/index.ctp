@@ -73,7 +73,7 @@
 				}
 				?>
 					<td style= "padding-top: 0px; font-size: 18px; width: 100px;">
-						<span class = "Fuente_Texto" style = ' text-align: center;'> <?php echo $item['Subcategoria']['alias'];  ?></span>
+						<span class = "Fuente_Texto" style = ' text-align: center; padding-right:10px;'> <?php echo $item['Subcategoria']['alias'];  ?></span>
 					</td>
 				</td>
 				<td class="Bold" valign="top" align="left">
@@ -85,16 +85,12 @@
 					// debug($item);
 				if ($item['Subcategoria']['id'] == 1) {
 					echo 'Género:<br>';
-				} else {
-					echo 'Especialidad:<br>';
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php 
 				if ($item['Subcategoria']['id'] == 1) {
 					echo $item['Item']['genero'];
-				}else{
-					echo $i['Item']['especialidad'];
 				}
 				?>
 				</span>

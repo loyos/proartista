@@ -84,15 +84,11 @@
 				<?php
 				if ($item['Subcategoria']['id'] == 1) {
 					echo 'Género:<br>';
-				} else {
-					echo 'Especialidad: <br>';
 				}?>
 				</span>
 				<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php 
 				if ($item['Subcategoria']['id'] == 1) {
-					echo $item['Item']['genero'];
-				}else {
 					echo $item['Item']['genero'];
 				}?>
 				<br>
