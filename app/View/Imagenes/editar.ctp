@@ -47,8 +47,8 @@
 			Aquí podrás cambiar tu imagen principal, así como las imagenes que quieras mostrar en tu publicación.<br><br>
 			1) Agrega tu imagen principal.<br><br>
 			2) Agrega de 1 a 4 fotos para tú galeria(opcional).<br><br>
-			3) Presiona el botón guardar fotos.<br><br>
-			4) Si estás conforme presiona el botón finalizar publicación.
+			3) Presiona el botón finalizar publicación para cargar tus fotos.<br><br>
+			
 		</div>
 	<?php
 	echo '<table cellspacing="0" cellpadding="10" style = "margin-top: 40px; clear: left;  border-top: 1px solid #F29100">';
