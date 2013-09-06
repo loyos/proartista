@@ -67,12 +67,12 @@ class Item extends AppModel {
     );
 
 	public $validate = array(
-        // 'alias' => array(
-            // 'required' => array(
-                // 'rule' => array('notEmpty'),
-                // 'message' => 'El nombre es obligatorio'
-            // )
-        // ),
+        'alias' => array(
+            'required' => array(
+                'rule' => array('notEmpty'),
+                'message' => 'Este campo es obligatorio'
+            )
+        ),
         'email' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
