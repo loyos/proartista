@@ -110,7 +110,7 @@ class Item extends AppModel {
 		'biografia' => array(
 			'caracteres_bio' => array(
                 'rule' => array('caracteres_biografia'),
-                'message' => 'Máximo 400 caracteres'
+                'message' => 'Máximo 700 caracteres'
             ),
         ),
         // 'telefono' => array(
@@ -172,7 +172,7 @@ class Item extends AppModel {
 	}
 	
 	function caracteres_biografia($value) {
-		if (!empty($value['biografia'])&& strlen($value['biografia']) > 210) {
+		if (!empty($value['biografia'])&& strlen($value['biografia']) > 700) {
 			return false;
 		}
 

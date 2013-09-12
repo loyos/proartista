@@ -300,7 +300,7 @@ function direccion(){
 		echo '<tr><td>Artista</td><td>';
 		echo $this->Form->input('alias', array(
 			'label' => false,
-			'value' => '',
+			// 'value' => '',
 			'after' => '*'
 		));
 		echo '</td>';
@@ -402,6 +402,7 @@ function direccion(){
 			'id' =>'bio',
 			'class' => 'textarea'
 		));
+			echo '<span style = "font-size: 14px; ">Caracteres restantes: </span>' . '<div id= "remainbio" class= "contador" >	</div>';
 		echo '</td>';
 		echo '</tr>';
 		
@@ -412,13 +413,14 @@ function direccion(){
 			'id' =>'especialidad'
 		));
 		echo '</td>';
-		echo '<td style="vertical-align:top">Descripcion breve</td><td style="vertical-align:top">';
+		echo '<td style="vertical-align:top">Descripción breve</td><td style="vertical-align:top">';
 		echo $this->Form->input('descripcion', array(
 			'label' => false,
 			'id' => 'en_busca',
 			'after' => '*',
 			'cols' => '20',
 		));
+		echo '<span style = "font-size: 14px; ">Caracteres restantes: </span>' . '<div id= "remain" class= "contador" >	</div>';
 		echo '</td>';
 		echo '</tr>';
 		
@@ -495,6 +497,41 @@ $(document).ready(function() {
 		}
 	});
 
+	characterLimit = 60;
+	
+	 // $('#remain').html(characterLimit);
+	 
+	 $('#en_busca').bind('keyup', function(){  
+        var charactersUsed = $(this).val().length;  
+          
+        if(charactersUsed > characterLimit){  
+            charactersUsed = characterLimit;  
+            $(this).val($(this).val().substr(0, characterLimit));  
+            $(this).scrollTop($(this)[0].scrollHeight);  
+        }  
+          
+        var charactersRemaining = characterLimit - charactersUsed;  
+          
+        $('#remain').html(charactersRemaining);
+    }); 
+	
+	characterLimitbio = 700;
+	
+	 // $('#remain').html(characterLimit);
+	 
+	 $('#bio').bind('keyup', function(){
+        var charactersUsed = $(this).val().length;  
+          
+        if(charactersUsed > characterLimitbio){  
+            charactersUsed = characterLimitbio;  
+            $(this).val($(this).val().substr(0, characterLimitbio));  
+            $(this).scrollTop($(this)[0].scrollHeight);  
+        }  
+          
+        var charactersRemaining = characterLimitbio - charactersUsed;
+          
+        $('#remainbio').html(charactersRemaining);
+    });
 	
 	
 });
@@ -537,4 +574,5 @@ $('#genero3').change(function(){
 });
 
 genero();
+
 </script>

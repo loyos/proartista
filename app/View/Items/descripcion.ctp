@@ -34,7 +34,7 @@
 		console.debug(ancho);
 		});
 	</script>
-<div class="index box">
+<div class="index box" style = "height: 750px;">
 <?php echo $this->element('regresar_home'). '<br>'; ?>
 <div class = "marco_slider">
 <div class="container_slider">

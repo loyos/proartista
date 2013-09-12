@@ -707,7 +707,15 @@ td.td_img{
 }
 
 .error-message {
-	color:white;
+	color: red;
+}
+
+.contador{
+	color:black;
+	background: white;
+	height: 20px;
+	width: 30px;
+	font-size: 14px;
 }
 
 .title_big{
