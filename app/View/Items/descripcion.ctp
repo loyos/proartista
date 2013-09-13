@@ -133,7 +133,7 @@
 			echo '<br><br>'; 
 		}
 		if (!empty($item['Item']['descripcion'])) {
-			echo '<span class="title_span">Estan en busca:</span>'; echo '<br>';
+			echo '<span class="title_span">Descripción breve:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
 		}
 		if (!empty($item['Item']['direccion'])) {
