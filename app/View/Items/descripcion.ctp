@@ -34,7 +34,7 @@
 		console.debug(ancho);
 		});
 	</script>
-<div class="index box" style = "height: 750px;">
+<div class="index box" style = "height: auto;">
 <?php echo $this->element('regresar_home'). '<br>'; ?>
 <div class = "marco_slider">
 <div class="container_slider">
@@ -73,7 +73,7 @@
 <div class = "container_info">
 	<div class="content_descripcion">
 		<?php
-		 echo '<div style = "float: left">';
+		 echo '<div class = "des_left" style = "float: left">';
 		if (!empty($item['Item']['genero'])) {
 			echo '<p>';
 			echo '<span class="title_span">Genero:</span>';
@@ -98,9 +98,23 @@
 			echo '<span class="descripcion_span"><a href="mailto:'.$item['Item']['email'].'">'.$item['Item']['email'].'</a></span>';
 			echo '</p>';
 		}
+		if (!empty($item['Item']['experiencia'])) {
+			
+			echo '<span class="title_span">Experiencia:</span>'; echo '<br>';
+			echo '<span class="descripcion_span">'.$item['Item']['experiencia'].'</span>';
+			echo '<br><br>'; 
+		}
+		if (!empty($item['Item']['descripcion'])) {
+			echo '<span class="title_span">Descripción breve:</span>'; echo '<br>';
+			echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
+		}
+		if (!empty($item['Item']['direccion'])) {
+			echo '<span class="title_span">Dirección:</span>'; echo '<br>';
+			echo '<span class="descripcion_span">'.$item['Item']['direccion'].'</span>';
+		}
 		 echo '</div>';
 		 
-		 echo '<div style = "float: left">';
+		 echo '<div class = "des_right" style = "float: right">';
 		if (!empty($item['Item']['telefono'])) {
 			echo '<p>';
 			echo '<span class="title_span">Tlf:</span>'; echo '<br>';
@@ -125,23 +139,26 @@
 			echo '<br><br>'; 
 		}
 		 echo '</div>';
-		 echo '<div style = "float: left">';
-		if (!empty($item['Item']['experiencia'])) {
+		 echo '<div class = "des_left" style = "float: left">';
+		// if (!empty($item['Item']['experiencia'])) {
 			
-			echo '<span class="title_span">Experiencia:</span>'; echo '<br>';
-			echo '<span class="descripcion_span">'.$item['Item']['experiencia'].'</span>';
-			echo '<br><br>'; 
-		}
-		if (!empty($item['Item']['descripcion'])) {
-			echo '<span class="title_span">Descripción breve:</span>'; echo '<br>';
-			echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
-		}
-		if (!empty($item['Item']['direccion'])) {
-			echo '<span class="title_span">Dirección:</span>'; echo '<br>';
-			echo '<span class="descripcion_span">'.$item['Item']['direccion'].'</span>';
-		}
+			// echo '<span class="title_span">Experiencia:</span>'; echo '<br>';
+			// echo '<span class="descripcion_span">'.$item['Item']['experiencia'].'</span>';
+			// echo '<br><br>'; 
+		// }
+		// if (!empty($item['Item']['descripcion'])) {
+			// echo '<span class="title_span">Descripción breve:</span>'; echo '<br>';
+			// echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
+		// }
+		// if (!empty($item['Item']['direccion'])) {
+			// echo '<span class="title_span">Dirección:</span>'; echo '<br>';
+			// echo '<span class="descripcion_span">'.$item['Item']['direccion'].'</span>';
+		// }
 		echo '</div>';
 		?>
 	</div>
 </div>
+	<div style = "width: 100%;">
+	</div>
 </div>
+

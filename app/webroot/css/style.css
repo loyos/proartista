@@ -519,10 +519,19 @@ img.image_txt {
 	margin-left: 0px;
 }
 
+
 .content_descripcion div {
-	margin-left: 50px;
 	text-align: left;
-	max-width: 200px;
+	max-width: 300px;
+	padding: 20px;
+}
+
+.des_left{
+	float: left
+}
+
+.des_right{
+	float: right
 }
 
 .descripcion_span p {
