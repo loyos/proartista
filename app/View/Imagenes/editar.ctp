@@ -91,6 +91,7 @@
 		
 	echo '</td></tr>';
 	echo '<tr><td>';
+	if(empty($imagenes['0']['Imagen']['imagen'])){
 	echo "<div class='file_wrap'>";
 		echo "Seleccionar";
 		echo $this->Form->file('galeria_imagen.',array(
@@ -101,8 +102,10 @@
 			'multiple' => 'multiple',
 	));
 	echo '</div>';
+	}
 	echo '</td>';
 	echo '<td>';
+	if(empty($imagenes['1']['Imagen']['imagen'])){
 	echo "<div class='file_wrap'>";
 		echo "Seleccionar";
 		echo $this->Form->file('galeria_imagen.',array(
@@ -113,8 +116,10 @@
 			'multiple' => 'multiple'
 	));
 	echo '</div>';
+	}
 	echo '</td>';
 	echo '<td>';
+	if(empty($imagenes['2']['Imagen']['imagen'])){
 	echo "<div class='file_wrap'>";
 		echo "Seleccionar";
 		echo $this->Form->file('galeria_imagen.',array(
@@ -125,8 +130,10 @@
 			'multiple' => 'multiple'
 	));
 	echo '</div>';
+	}
 	echo '</td>';
 	echo '<td>';
+	if(empty($imagenes['3']['Imagen']['imagen'])){
 	echo "<div class='file_wrap'>";
 		echo "Seleccionar";
 		echo $this->Form->file('galeria_imagen.',array(
@@ -134,9 +141,9 @@
 			'id' => 'upload_imagen4',
 			'class' => 'img_principal',
 			'onchange' => 'readURL(this)',
-			'multiple' => 'multiple'
 	));
 	echo '</div>';
+	}
 	echo '</td>';
 	// echo '<td>'.$this->Html->link('Eliminar','#',array('class'=>'link_limpiar','onclick'=>'limpiar_imagen()')),'</td>';
 	echo '</tr>';
