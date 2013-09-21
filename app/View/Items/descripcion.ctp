@@ -139,26 +139,7 @@
 			echo '<br><br>'; 
 		}
 		 echo '</div>';
-		 echo '<div class = "des_left" style = "float: left">';
-		// if (!empty($item['Item']['experiencia'])) {
-			
-			// echo '<span class="title_span">Experiencia:</span>'; echo '<br>';
-			// echo '<span class="descripcion_span">'.$item['Item']['experiencia'].'</span>';
-			// echo '<br><br>'; 
-		// }
-		// if (!empty($item['Item']['descripcion'])) {
-			// echo '<span class="title_span">Descripción breve:</span>'; echo '<br>';
-			// echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
-		// }
-		// if (!empty($item['Item']['direccion'])) {
-			// echo '<span class="title_span">Dirección:</span>'; echo '<br>';
-			// echo '<span class="descripcion_span">'.$item['Item']['direccion'].'</span>';
-		// }
-		echo '</div>';
-		?>
-	</div>
+	?>
 </div>
-	<div style = "width: 100%;">
-	</div>
 </div>
-
+</div>
