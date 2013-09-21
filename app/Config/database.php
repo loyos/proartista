@@ -104,25 +104,25 @@ class DATABASE_CONFIG {
 		// 'encoding' => 'utf8'
 	// );
 	
-	// var $default = array(
-		// 'datasource' => 'Database/Mysql',
-		// 'persistent' => false,
-		// 'host' => 'proartistacomve.ipagemysql.com',
-		// 'login' => 'proartista',
-		// 'password' => 'proartista123123',
-		// 'database' => 'proartista',
-		// 'prefix' => '',
-		// 'encoding' => 'utf8'
-	// );
-	
 	var $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'root',
-		'password' => '',
+		'host' => 'proartistacomve.ipagemysql.com',
+		'login' => 'proartista',
+		'password' => 'proartista123123',
 		'database' => 'proartista',
 		'prefix' => '',
 		'encoding' => 'utf8'
 	);
+	
+	// var $default = array(
+		// 'datasource' => 'Database/Mysql',
+		// 'persistent' => false,
+		// 'host' => 'localhost',
+		// 'login' => 'root',
+		// 'password' => '',
+		// 'database' => 'proartista',
+		// 'prefix' => '',
+		// 'encoding' => 'utf8'
+	// );
 }
