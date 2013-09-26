@@ -205,6 +205,9 @@ class ItemsController extends AppController {
 		}
 		if (!empty($this->data)) {
 			$data = $this->data;
+			if ($this->data['Item']['especialidad'] == '(Palabras clave)') {
+				$data['Item']['especialidad'] = '';
+			}
 			$genero = "";
 			$categorias_musica = $this->Subcategoria->find("all",array(
 				'conditions' => array('Subcategoria.categoria_id' => 1)
