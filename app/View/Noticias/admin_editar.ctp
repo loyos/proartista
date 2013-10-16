@@ -1,3 +1,9 @@
+<script type="text/javascript">
+	tinyMCE.init({
+		mode : "textareas",
+		
+	});
+</script>
 <div class="index box">
 <div class="title_izquierda">
 	<?php echo $this->Html->link('<<Regresar',array(
