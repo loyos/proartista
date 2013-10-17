@@ -16,7 +16,7 @@
 			echo '<tr>';
 			echo '<td style="padding: 10px;">'.$n['Noticia']['titulo'].'</td>';
 			echo '<td style="width: 200px;padding: 10px;">'.$n['Noticia']['descripcion_breve'].'</td>';
-			echo '<td style="padding: 10px;">'.$n['Noticia']['noticia'].'</td>';
+			echo '<td style="padding: 10px;">'.$n['Noticia']['noticia'][0].'...</td>';
 			echo '<td>';
 			echo $this->Html->link('Editar',array('action' => 'admin_editar',$n['Noticia']['id']));
 			echo '<br>';

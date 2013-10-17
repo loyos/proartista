@@ -10,6 +10,11 @@ class NoticiasController extends AppController {
 
     public function admin_index() {
 		$noticias = $this->Noticia->find('all');
+		$i = 0;
+		foreach ($noticias as $not){
+			$noticias[$i]['Noticia']['noticia'] = str_split($not['Noticia']['noticia'], 100);
+			$i++;
+		}
 		$this->set(compact('noticias'));
     }
 	
