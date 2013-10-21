@@ -107,6 +107,7 @@
 		if (!empty($item['Item']['descripcion'])) {
 			echo '<span class="title_span">Descripción breve:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
+			echo '<br><br>'; 
 		}
 		if (!empty($item['Item']['direccion'])) {
 			echo '<span class="title_span">Dirección:</span>'; echo '<br>';
