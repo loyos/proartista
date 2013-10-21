@@ -15,7 +15,7 @@
 <h2><?php echo $titulo; ?></h2>
 </div>
 <?php
-echo $this->Form->create('Noticia');
+echo $this->Form->create('Noticia',array('type'=> 'file'));
 echo '<table>';
 echo '<tr>';
 echo '<td>Título</td>';
@@ -38,6 +38,14 @@ echo '<tr>';
 echo '<td>Noticia</td>';
 echo '<td>';
 echo $this->Form->input('noticia',array(
+	'label' => false
+));
+echo '</td>';
+echo '</tr>';
+echo '<tr>';
+echo '<td>Imagen</td>';
+echo '<td>';
+echo $this->Form->input('Imagen',array(
 	'label' => false
 ));
 echo '</td>';

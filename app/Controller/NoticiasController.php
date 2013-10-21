@@ -1,7 +1,7 @@
 <?php
 class NoticiasController extends AppController {
     public $helpers = array('Html', 'Form', 'Session');
-    public $components = array('Session');
+    public $components = array('Session','JqImgcrop');
 	
 	 public function beforeFilter() {
 		parent::beforeFilter();
@@ -26,6 +26,17 @@ class NoticiasController extends AppController {
 		}
 		if (!empty($this->data['Noticia']['noticia'])) {
 			$data = $this->data;
+			if (!empty($this->data['Noticia']['Imagen']['name']) && $this->data['Noticia']['Imagen']['error'] != 1 ) {
+					$data['Noticia']['imagen'] = $this->data['Noticia']['Imagen']['name'];
+					$guardo = $this->JqImgcrop->uploadImage($this->data['Noticia']['Imagen'], 'img', '');
+					if ($guardo) {
+					} else {
+						$this->Session->setFlash("El tamaño de la imagen sobrepasa el límite de carga", 'success');
+						$this->redirect(array('action' => 'admin_editar'));
+					}
+			} elseif (!empty($this->data['Notica']['Imagen']['name']) && $this->data['Noticia']['Imagen']['error'] == 1 ) {
+				$this->Session->setFlash("El tamaño de la imagen sobrepasa el límite de carga", 'success');
+			}
 			if (!empty($id)) {
 				$data['Noticia']['id'] = $id;
 			}

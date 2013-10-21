@@ -31,8 +31,7 @@ $cakeDescription = "ProArtista";
 		echo $this->Html->css('style');
 		echo $this->Html->css('global');
 		echo $this->Html->script('jquery.1.9.1.min');
-		echo $this->Html->script('slides.min.jquery');
-		echo $this->Html->script('init');		
+		echo $this->Html->script('slides.min.jquery');	
 		echo $this->Html->script('tiny_mce');
 		echo $this->Html->script('ticker00');
 		

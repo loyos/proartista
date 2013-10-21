@@ -12,6 +12,9 @@
 			<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 				<?php
 				if (!empty($id)) {
+					echo '<div class="imagen_de_noticia">';
+					echo $this->Html->image($noticia['Noticia']['imagen']);
+					echo '</div>';
 					$cadena = '<span class="Fuente_Texto">'.$noticia['Noticia']['titulo'].'</span><br><span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">'.$noticia['Noticia']['noticia'];
 					echo $cadena;
 				}
@@ -31,10 +34,14 @@
 				<?php
 					$count = 1;
 				?>
+					
 					<tr>
 					<td>
 					<table style= "width: 561px; border-bottom: 1px dotted #EA8C00; padding-top: 10px; padding-bottom: 10px; background-color: #232222; border: 1px solid #444242; border-radius: 10px; padding-left: 10px; padding-right:10px;">
 					<tr style= "padding: 10px;">
+					<td style="width:100px;">
+						<?php echo $this->Html->image($n['Noticia']['imagen'],array('width' => '100px'));?>
+					</td>
 					<td class="Bold" valign="top" align="left">
 					<span class="Fuente_Texto">Titulo:</span>
 					<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
@@ -46,7 +53,7 @@
 					</span>
 					<br>
 					</td>
-					<td style="text-align:right">
+					<td style="text-align:right; vertical-align:top">
 					<?php $timestamp = strtotime($n['Noticia']['fecha']); ?>
 					<span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">
 					<?php echo date('d/m/Y', $timestamp);?> </span>

@@ -3,7 +3,6 @@
     src: url('fonts/Aero _Matics_Regular.ttf');
 }
 
-
 body {
 	background-image: url('../img/background.jpg');
 	font-family: Aero,Sintony, sans-serif;
@@ -800,6 +799,13 @@ input[type="file"] {
 	opacity: 0;
 }
 
+input[type="file"].visible {
+	cursor: pointer;
+	color: white;
+	width: 100%;
+	opacity: 1;
+}
+
 .textarea{
 	width: 200px;
 }
@@ -901,4 +907,17 @@ ul#slide_frase {
 	margin: auto;
 	width: 561px;
 	margin-bottom:20px;
+}
+
+.noticias {
+	display:block;
+}
+
+.imagen_noticia {
+	float:left;
+}
+
+.imagen_de_noticia {
+	text-align:center;
+	margin-bottom:10px;
 }

@@ -114,7 +114,7 @@ class IndexController extends AppController {
 		$noticia = $this->Noticia->findById($id);
 		$titulo = $noticia['Noticia']['titulo'];
 		$desc = $noticia['Noticia']['noticia'];
-		$cadena = '<span class="Fuente_Texto">'.$titulo.'</span><br><span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">'.$desc.'</span>';
+		$cadena = '<div class="imagen_de_noticia"><img src="http://proartista.com.ve/img/'.$noticia['Noticia']['imagen'].'"></div>'.'<span class="Fuente_Texto">'.$titulo.'</span><br><span class="Fuente_Texto" style="color: #FFF; font-weight: normal; font-size: 14px;">'.$desc.'</span>';
 		$this->autoRender = false;
 		$this->RequestHandler->respondAs('json');
 		echo json_encode($cadena);

@@ -287,36 +287,35 @@
 		),
 		array('escape' => false)
 	);?>
-	<table width="438" border="0">
 		<?php
 		$now = date('Y/m/d');
 		foreach ($noticias as $n) {
 		// $fecha = explode(' ',$i['Item']['creado']);
 		// $fecha=date("d/m/Y",strtotime($fecha[0]));
 		?>
-		<tr>
-			<td width="221" align="left" style="font-size: 12px; font-weight: bold; text-align: left; font-family: 'Arial Black', Gadget, sans-serif; color: #FFF;">
-				<span style="color: #F29100; font-weight: bold; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 16px;"><?php echo $n['Noticia']['titulo']?> </span>
-				<?php $timestamp = strtotime($n['Noticia']['fecha']); ?>
-				<span style="color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;"><?php echo date('d/m/Y', $timestamp);?> </span>
-			</td>
-		</tr>
-		<tr>
-			<td  width="221" style="text-align: left; font-size: 14px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; color: #FFF;">
-			<?php echo $n['Noticia']['descripcion_breve']?>
-			<span style="color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;">
-			<?php echo $this->Html->link('+Ver mas',array('action' => 'noticias',$n['Noticia']['id']))?> </span>
-			</td>
-		</tr>
-		<tr>
-			<td>
-			<?php echo $this->Html->image('linea_actual.jpg')?>
-			</td>
-		</tr>
-
+			<div class="noticias">
+				<div class="imagen_noticia">
+					<?php echo $this->Html->image($n['Noticia']['imagen'],array('width' => '100px'));?>
+				</div>
+				<div class="info_noticia">
+					<div class="arriba_noticia">
+						<span style="margin-left:15px; color: #F29100; font-weight: bold; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 16px;"><?php echo $n['Noticia']['titulo']?> </span>
+						<?php $timestamp = strtotime($n['Noticia']['fecha']); ?>
+						<span style="margin-right:20px; color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;"><?php echo date('d/m/Y', $timestamp);?> </span>
+					</div>
+					<div class="abajo_noticia" style="margin-left:110px; width:220px; margin-top:5px;">
+						<span>
+						<?php echo $n['Noticia']['descripcion_breve']?>
+						</div>
+						<span style="margin-right:20px; color: #F29100; float: right; font-weight: italic; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-size: 12px;">
+						<?php echo $this->Html->link('+Ver mas',array('action' => 'noticias',$n['Noticia']['id']))?> </span>
+					</div>
+			</div>
+			<div class="bottom_noticias" style="margin-top:10px; margin-bottom:10px">
+				<?php echo $this->Html->image('linea_actual.jpg')?>
+			</div>
 		<?php
 		} ?>
-	</table>
 </div>
 
 <div class="twitter">
