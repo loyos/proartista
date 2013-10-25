@@ -7,17 +7,35 @@ class ImagenesController extends AppController {
 	function editar($item_id) {
 	
 		if(!empty($this->data)){
-				if (!empty($this->data['Item']['logo_item']['name']) && $this->data['Item']['logo_item']['error'] != 1 ) {
-					$data['Item']['logo'] = $this->data['Item']['logo_item']['name'];
-					$data['Item']['id'] = $item_id;
-					$sizes = getimagesize($this->data['Item']['logo_item']['tmp_name']);
-					$guardo = $this->JqImgcrop->uploadImage($this->data['Item']['logo_item'], 'img/logos', '');
-					if ($guardo) {
-						$this->Item->save($data, array('validate'=>'first'));
-					} else {
-						$this->Session->setFlash("El tamaño de la imagen sobrepasa el límite de carga", 'success');
-						$this->redirect(array('action' => 'edit'));
-					}
+			$data['Item']['logo_item'] = $this->data['Item']['logo_item'];
+			$data['Item']['logo_item']['name'] = $this->data['Item']['logo_item']['name'];
+			if (!empty($this->data['Item']['logo_item']['name']) && $this->data['Item']['logo_item']['error'] != 1 ) {	
+				$hay_imagen = $this->Imagen->find('all',array(
+					'conditions' => array(
+						'Imagen.imagen' => $data['Item']['logo_item']['name']
+					)
+				));
+				while (!empty($hay_imagen)) {
+					$numero = $this->Imagen->generar_codigo();
+					$split = explode('.',$data['Item']['logo_item']['name'],2); 
+					$data['Item']['logo_item']['name'] = $split[0].$numero.'.'.$split[1];
+					$hay_imagen = $this->Imagen->find('all',array(
+						'conditions' => array(
+							'Imagen.imagen' => $data['Item']['logo_item']['name']
+						)
+					));
+
+				}
+				$data['Item']['id'] = $item_id;
+				$sizes = getimagesize($this->data['Item']['logo_item']['tmp_name']);
+				$guardo = $this->JqImgcrop->uploadImage($data['Item']['logo_item'], 'img/logos', '');
+				if ($guardo) {
+					$data['Item']['logo'] = $data['Item']['logo_item']['name'];
+					$this->Item->save($data, array('validate'=>'first'));
+				} else {
+					$this->Session->setFlash("El tamaño de la imagen sobrepasa el límite de carga", 'success');
+					$this->redirect(array('action' => 'edit'));
+				}
 			} elseif (!empty($this->data['Item']['logo_item']['name']) && $this->data['Item']['logo_item']['error'] == 1 ) {
 				$this->Session->setFlash("El tamaño de la imagen sobrepasa el límite de carga", 'success');
 			}
@@ -29,9 +47,26 @@ class ImagenesController extends AppController {
 						//var_dump($this->data['Imagen']['galeria_imagen']);die("dddf");
 						// $data = $this->data;
 						$data = $image;
-						$data['Imagen']['item_id'] = $item_id;
 						$data['Imagen']['imagen'] = $image['name'];
-						$trae = $this->JqImgcrop->uploadImage($image, 'img/galeria/', '');
+						$hay_imagen = $this->Imagen->find('all',array(
+							'conditions' => array(
+								'Imagen.imagen' => $data['Imagen']['imagen']
+							)
+						));
+						while (!empty($hay_imagen)) {
+							$numero = $this->Imagen->generar_codigo();
+							$split = explode('.',$data['Imagen']['imagen'],2); 
+							$data['Imagen']['imagen'] = $split[0].$numero.'.'.$split[1];
+							$hay_imagen = $this->Imagen->find('all',array(
+								'conditions' => array(
+									'Imagen.imagen' => $data['Imagen']['imagen']
+								)
+							));
+
+						}
+						$data['name'] = $data['Imagen']['imagen'];
+						$data['Imagen']['item_id'] = $item_id;
+						$trae = $this->JqImgcrop->uploadImage($data, 'img/galeria/', '');
 						$this->Imagen->create();
 						if($this->Imagen->save($data)){
 							$this->Session->setFlash("Imágen agregada", 'success');

@@ -9,6 +9,16 @@ class Imagen extends AppModel {
             'foreignKey'   => 'item_id'
         )
     );
+	
+	function generar_codigo() {
+	$codigo = '';
+		for ($i=1; $i<=4; $i++) {
+			$numero_aleatorio = rand(1,9);
+			$codigo = $codigo.$numero_aleatorio;
+		}
+		return($codigo);
+	}
 }
+
 
 ?>
