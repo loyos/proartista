@@ -109,6 +109,11 @@
 			echo '<span class="descripcion_span">'.$item['Item']['descripcion'].'</span>';
 			echo '<br>'; 
 		}
+		if (!empty($item['Item']['web'])) {
+			echo '<span class="title_span">Página web:</span>'; echo '<br>';
+			echo '<span class="descripcion_span">'.$item['Item']['web'].'</span>';
+			echo '<br>'; 
+		}
 		if (!empty($item['Item']['direccion'])) {
 			echo '<span class="title_span">Dirección:</span>'; echo '<br>';
 			echo '<span class="descripcion_span">'.$item['Item']['direccion'].'</span>';
