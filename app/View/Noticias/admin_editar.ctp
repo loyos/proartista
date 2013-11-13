@@ -45,7 +45,7 @@ echo '</tr>';
 echo '<tr>';
 echo '<td>Imagen</td>';
 echo '<td>';
-echo $this->Form->input('Imagen',array(
+echo $this->Form->file('Imagen',array(
 	'label' => false
 ));
 echo '</td>';

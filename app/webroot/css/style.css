@@ -799,6 +799,13 @@ input[type="file"] {
 	opacity: 0;
 }
 
+input[type="file"]#NoticiaImagen {
+	cursor: pointer;
+	color: white;
+	width: auto;
+	opacity: 1;
+}
+
 input[type="file"].visible {
 	cursor: pointer;
 	color: white;
