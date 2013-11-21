@@ -179,26 +179,17 @@ class ItemsController extends AppController {
 
 	function editar($item_id = null,$listo=false) {
 		if ($listo) {
-			// $data = $this->Item->findById($item_id);
-			// $username = $this->Auth->user('username');
-			// $alias = $data['Item']['alias'];
-			// $Email = new CakeEmail();
-			// $Email->from(array('me@example.com' => 'Proartista.com.ve'));
-			// $Email->emailFormat('html');
-			// $Email->to($data['Item']['email']);
-			// $Email->subject('Tu solicitud está siendo procesada');
-			// $Email->template('solicitud_publicacion');
-			// $Email->viewVars(compact('username'));
-			// $Email->send();
-		
-		
-			// $Email->from(array('me@example.com' => 'Proartista.com.ve'));
-			// $Email->emailFormat('html');
-			// $Email->to('proartistamr@gmail.com');
-			// $Email->subject('Nueva solicitud');
-			// $Email->template('nueva_publicacion');
-			// $Email->viewVars(compact('username','alias'));
-			// $Email->send();
+			$data = $this->Item->findById($item_id);
+			$username = $this->Auth->user('username');
+			$alias = $data['Item']['alias'];
+			$Email = new CakeEmail();
+			$Email->from(array('me@example.com' => 'Proartista.com.ve'));
+			$Email->emailFormat('html');
+			$Email->to('proartistamr@gmail.com');
+			$Email->subject('Nueva solicitud');
+			$Email->template('nueva_publicacion');
+			$Email->viewVars(compact('username','alias'));
+			$Email->send();
 			
 			$this->Session->setFlash("Recibirás un correo cuando tu publicación sea aprobada", 'permanent');
 			$this->redirect(array('controller'=>'users','index'=>'index'));
