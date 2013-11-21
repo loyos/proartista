@@ -333,9 +333,10 @@ h2 {
 
 .twitter {
     width: 260px;
-	float:right;
-	margin-top:0px;
-	margin-top: 20px;
+	float: right;
+	margin-top: 428px;
+	margin-left: 725px;
+	position: absolute;
 }
 
 #twitter-widget-0 {

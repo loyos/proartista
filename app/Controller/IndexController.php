@@ -6,7 +6,7 @@ class IndexController extends AppController {
 	
 	 public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('index','contacto','quienes_somos', 'terminos', 'politicas', 'como_empezar','noticias'); // Letting users register themselves
+		$this->Auth->allow('index','contacto','quienes_somos', 'terminos', 'politicas', 'como_empezar','noticias','buscar_noticia'); // Letting users register themselves
 	}
 
     public function index() {
