@@ -101,6 +101,8 @@ class UsersController extends AppController {
 	
 	function admin_index(){  // Así deberían ser todos los buscadores, en la misma vista!
 	$this->modelClass = 'Item';
+	$this->Item->validate = array(); // con esto quitamos las validaciones del modelo en esta accion especifica
+	
 	
 			$this->Prg->commonProcess();
 			if(!empty($this->passedArgs)){
