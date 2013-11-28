@@ -112,7 +112,7 @@ class ItemsController extends AppController {
 		$this->loadModel('Genero');
 		$genero = $this->Genero->find('all', array(
 			'recursive' => -1,
-			'order' => 'Genero.id'
+			'order' => 'Genero.nombre'
 		));
 		$this->autoRender = false;
 		$this->RequestHandler->respondAs('json');
@@ -124,7 +124,7 @@ class ItemsController extends AppController {
 		$genero = $this->Genero->find('all', array(
 			'conditions' => array('nombre !='=>$_POST['genero_uno']),
 			'recursive' => -1,
-			'order' => 'Genero.id'
+			'order' => 'Genero.nombre'
 		));
 		$this->autoRender = false;
 		$this->RequestHandler->respondAs('json');
@@ -136,7 +136,7 @@ class ItemsController extends AppController {
 		$genero = $this->Genero->find('all', array(
 			'conditions' => array('NOT' => array('Genero.nombre' => array($_POST['genero_uno'],$_POST['genero_tres']))),
 			'recursive' => -1,
-			'order' => 'Genero.id'
+			'order' => 'Genero.nombre'
 		));
 		$this->autoRender = false;
 		$this->RequestHandler->respondAs('json');
@@ -148,7 +148,7 @@ class ItemsController extends AppController {
 		$genero = $this->Genero->find('all', array(
 			'conditions' => array('NOT' => array('Genero.nombre' => array($_POST['genero_uno'],$_POST['genero_dos']))),
 			'recursive' => -1,
-			'order' => 'Genero.id'
+			'order' => 'Genero.nombre'
 		));
 		$this->autoRender = false;
 		$this->RequestHandler->respondAs('json');
