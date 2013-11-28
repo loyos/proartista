@@ -295,7 +295,7 @@
 		?>
 			<div class="noticias">
 				<div class="imagen_noticia">
-					<?php echo $this->Html->image($n['Noticia']['imagen'],array('width' => '100px'));?>
+					<?php echo $this->Html->link($this->Html->image($n['Noticia']['imagen'],array('width' => '100px')),array('action' => 'noticias',$n['Noticia']['id']),array('escape' => false));?>
 				</div>
 				<div class="info_noticia">
 					<div class="arriba_noticia">
