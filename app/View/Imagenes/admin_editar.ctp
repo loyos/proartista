@@ -11,12 +11,13 @@
 <div class="edit_imagenes form_item">
 	<?php
 	echo $this->Form->create('Imagen', array('type' => 'file','onSubmit' => 'return checkSize();'));
-	echo '<table>';
+	echo '<table class = "tabla_centrada">';
+		echo "<div class= 'image_title'> Imagen Principal </div>";
 	echo '<tr><td colspan="3">';
 	echo '<table cellspacing="0" cellpadding="10">';
-			echo '<tr><td>';
-			echo 'Imagen principal:';
-			echo '</td><td>';
+			// echo '<tr><td>';
+			// echo 'Imagen principal:';
+			// echo '</td><td>';
 			if (!empty($this->data['Item']['logo'])){
 				echo $this->Html->image('logos/'.$this->data['Item']['logo'], array('width'=>'200px', 'id' => 'upload_logo'));
 				echo '</td></tr><tr><td></td><td>';
@@ -26,7 +27,7 @@
 				echo $this->Html->image('no_image.jpg', array('width'=>'200px', 'id' => 'upload_logo'));
 				echo '</td></tr><tr><td></td><td>';
 			}			
-			
+			echo "<div class= 'image_size_warning'> (Tamaño máximo 1.5 MB) </div>";
 			echo "<div class='file_wrap'>";
 				echo $text;
 				echo $this->Form->file('Item.logo_item',array(
@@ -40,7 +41,7 @@
 			echo '</tr>';
 			 echo '</table>';
 			 echo '</table>';
-	echo '<table cellspacing="0" cellpadding="10" style = "margin-top: 40px; border-top: 1px solid #F29100">';
+	echo '<table cellspacing="0" cellpadding="10" style = "margin-top: 20px; border-top: 1px solid #F29100" class = "tabla_centrada">';
 	echo '<tr><td>';
 		if(!empty($imagenes['0']['Imagen']['imagen'])){
 			echo "<div class = 'img-close0'>";
