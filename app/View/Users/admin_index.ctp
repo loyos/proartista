@@ -89,6 +89,6 @@
 	//}
 	?>
 	<div class="paginator">
-		<?php echo $this->Paginator->numbers(array('separator' =>'/')); ?>
+		<?php echo $this->Paginator->numbers(array('separator' =>'/','modulus'=>$numero_paginas,'class'=>'pagina_actual')); ?>
 		</div>
 </div>

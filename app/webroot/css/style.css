@@ -955,3 +955,7 @@ ul#slide_frase {
 	text-align:center;
 	margin-bottom:10px;
 }
+
+.paginator .current {
+	color: #c90;
+}

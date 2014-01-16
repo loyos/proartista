@@ -105,7 +105,7 @@ class UsersController extends AppController {
 	
 	
 			$this->Prg->commonProcess();
-			if(!empty($this->passedArgs)){
+		if(!empty($this->passedArgs)){
 				$this->paginate['conditions'] = $this->Item->parseCriteria($this->passedArgs);
 				$this->paginate['limit'] = 10;
 				$this->set('items', $this->paginate());
@@ -117,6 +117,11 @@ class UsersController extends AppController {
 			);
 			$this->set('items', $this->paginate());
 		}
+		$numero_paginas = $this->Item->find('all',array(
+			'conditions' => $this->paginate['conditions']
+		));
+		$numero_paginas = count($numero_paginas);
+		$this->set('numero_paginas',$numero_paginas);
 	}
 	
 	function admin_user() {
