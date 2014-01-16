@@ -14,6 +14,7 @@ class ItemsController extends AppController {
 	}
 
     public function index($subcategoria_id = null, $categoria_id = null) {
+		$this->Item->validate = array();
 		// $this->loadModel('Genero');
 		if (!empty($categoria_id) && $categoria_id == 7) {
 			$this->redirect(array('controller' => 'contactos', 'action'=>'index'));
@@ -52,7 +53,7 @@ class ItemsController extends AppController {
     }
 
 	public function find($subcategoria_id = null, $categoria_id = null){
-		
+		$this->Item->validate = array(); // quitamos con esto la validacion del modelo en esta accion especifica
 		$generos = $this->Genero->find('list', array(
 				'fields' => array('Genero.nombre',  'Genero.nombre'),
 				'recursive' => -1	
