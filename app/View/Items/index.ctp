@@ -76,7 +76,7 @@
 						<span class = "Fuente_Texto" style = ' text-align: center; padding-right:10px;'> <?php echo $item['Subcategoria']['alias'];  ?></span>
 					</td>
 				</td>
-				<td class="Bold" valign="top" align="left">
+				<td class="Bold" valign="top" align="left" style="max-width:180px;min-width:180px">
 				<!-- <span class="Fuente_Texto">NOMBRE: <br></span> -->
 				<span> <?php echo strtoupper($item['Item']['alias']).'<br>';?> </span>
 				<br>
