@@ -96,7 +96,21 @@ class IndexController extends AppController {
 			'conditions' => array('User.activo' => 1)
 		));
 		$usuarios = count($usuarios);
-		$this->set(compact('publicaciones_activas','publicaciones_pendientes','totales','usuarios'));
+		
+		$usuarios_con_pubicacion = $this->Item->find('all',array(
+			'fields'=>array('Item.user_id'),
+			'recursive' => -1,
+		));
+		$usuarios_con_pubicacion = Set::extract($usuarios_con_pubicacion, '{n}.Item.user_id');
+		
+		$usuarios_sin_publicacion = $this->User->find('all',array(
+			'fields' => array('User.nombre','User.apellido','User.email'),
+			'conditions' => array(
+				"NOT" => array( "User.id" => $usuarios_con_pubicacion)
+			)
+		));
+		
+		$this->set(compact('publicaciones_activas','publicaciones_pendientes','totales','usuarios','usuarios_sin_publicacion'));
 	}
 	
 	function noticias($id = null) {
